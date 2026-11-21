@@ -1,0 +1,794 @@
+[
+ {
+  "id": "qt_sel103",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel103.hea",
+   "qtdb/data/qt-database-1.0.0/sel103.dat"
+  ],
+  "teks": "Record `sel103` (WFDB format: sel103.hea, sel103.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150270 and sample 156502 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel114",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel114.hea",
+   "qtdb/data/qt-database-1.0.0/sel114.dat"
+  ],
+  "teks": "Record `sel114` (WFDB format: sel114.hea, sel114.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150236 and sample 157045 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel116",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel116.hea",
+   "qtdb/data/qt-database-1.0.0/sel116.dat"
+  ],
+  "teks": "Record `sel116` (WFDB format: sel116.hea, sel116.dat; two ECG channels). Consider only the beats whose R peak lies between sample 154635 and sample 158901 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel14157",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel14157.hea",
+   "qtdb/data/qt-database-1.0.0/sel14157.dat"
+  ],
+  "teks": "Record `sel14157` (WFDB format: sel14157.hea, sel14157.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150680 and sample 155679 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel14172",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel14172.hea",
+   "qtdb/data/qt-database-1.0.0/sel14172.dat"
+  ],
+  "teks": "Record `sel14172` (WFDB format: sel14172.hea, sel14172.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150486 and sample 160899 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel15814",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel15814.hea",
+   "qtdb/data/qt-database-1.0.0/sel15814.dat"
+  ],
+  "teks": "Record `sel15814` (WFDB format: sel15814.hea, sel15814.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150208 and sample 153529 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel16265",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel16265.hea",
+   "qtdb/data/qt-database-1.0.0/sel16265.dat"
+  ],
+  "teks": "Record `sel16265` (WFDB format: sel16265.hea, sel16265.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150425 and sample 155774 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel16420",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel16420.hea",
+   "qtdb/data/qt-database-1.0.0/sel16420.dat"
+  ],
+  "teks": "Record `sel16420` (WFDB format: sel16420.hea, sel16420.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150286 and sample 156516 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel16483",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel16483.hea",
+   "qtdb/data/qt-database-1.0.0/sel16483.dat"
+  ],
+  "teks": "Record `sel16483` (WFDB format: sel16483.hea, sel16483.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150298 and sample 156203 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel16786",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel16786.hea",
+   "qtdb/data/qt-database-1.0.0/sel16786.dat"
+  ],
+  "teks": "Record `sel16786` (WFDB format: sel16786.hea, sel16786.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150360 and sample 157403 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel16795",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel16795.hea",
+   "qtdb/data/qt-database-1.0.0/sel16795.dat"
+  ],
+  "teks": "Record `sel16795` (WFDB format: sel16795.hea, sel16795.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150530 and sample 159266 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel17453",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel17453.hea",
+   "qtdb/data/qt-database-1.0.0/sel17453.dat"
+  ],
+  "teks": "Record `sel17453` (WFDB format: sel17453.hea, sel17453.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150266 and sample 156703 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel230",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel230.hea",
+   "qtdb/data/qt-database-1.0.0/sel230.dat"
+  ],
+  "teks": "Record `sel230` (WFDB format: sel230.hea, sel230.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150194 and sample 156932 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel232",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel232.hea",
+   "qtdb/data/qt-database-1.0.0/sel232.dat"
+  ],
+  "teks": "Record `sel232` (WFDB format: sel232.hea, sel232.dat; two ECG channels). Consider only the beats whose R peak lies between sample 155431 and sample 157318 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel30",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel30.hea",
+   "qtdb/data/qt-database-1.0.0/sel30.dat"
+  ],
+  "teks": "Record `sel30` (WFDB format: sel30.hea, sel30.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150389 and sample 157151 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel306",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel306.hea",
+   "qtdb/data/qt-database-1.0.0/sel306.dat"
+  ],
+  "teks": "Record `sel306` (WFDB format: sel306.hea, sel306.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150280 and sample 156510 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel307",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel307.hea",
+   "qtdb/data/qt-database-1.0.0/sel307.dat"
+  ],
+  "teks": "Record `sel307` (WFDB format: sel307.hea, sel307.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150410 and sample 158266 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel308",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel308.hea",
+   "qtdb/data/qt-database-1.0.0/sel308.dat"
+  ],
+  "teks": "Record `sel308` (WFDB format: sel308.hea, sel308.dat; two ECG channels). Consider only the beats whose R peak lies between sample 156838 and sample 160005 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel310",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel310.hea",
+   "qtdb/data/qt-database-1.0.0/sel310.dat"
+  ],
+  "teks": "Record `sel310` (WFDB format: sel310.hea, sel310.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150155 and sample 153231 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel33",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel33.hea",
+   "qtdb/data/qt-database-1.0.0/sel33.dat"
+  ],
+  "teks": "Record `sel33` (WFDB format: sel33.hea, sel33.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150439 and sample 162688 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel34",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel34.hea",
+   "qtdb/data/qt-database-1.0.0/sel34.dat"
+  ],
+  "teks": "Record `sel34` (WFDB format: sel34.hea, sel34.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150249 and sample 157354 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel38",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel38.hea",
+   "qtdb/data/qt-database-1.0.0/sel38.dat"
+  ],
+  "teks": "Record `sel38` (WFDB format: sel38.hea, sel38.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150268 and sample 154496 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel39",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel39.hea",
+   "qtdb/data/qt-database-1.0.0/sel39.dat"
+  ],
+  "teks": "Record `sel39` (WFDB format: sel39.hea, sel39.dat; two ECG channels). Consider only the beats whose R peak lies between sample 151788 and sample 156422 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel40",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel40.hea",
+   "qtdb/data/qt-database-1.0.0/sel40.dat"
+  ],
+  "teks": "Record `sel40` (WFDB format: sel40.hea, sel40.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150311 and sample 156542 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel42",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel42.hea",
+   "qtdb/data/qt-database-1.0.0/sel42.dat"
+  ],
+  "teks": "Record `sel42` (WFDB format: sel42.hea, sel42.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150175 and sample 155475 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel46",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel46.hea",
+   "qtdb/data/qt-database-1.0.0/sel46.dat"
+  ],
+  "teks": "Record `sel46` (WFDB format: sel46.hea, sel46.dat; two ECG channels). Consider only the beats whose R peak lies between sample 163581 and sample 166220 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel47",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel47.hea",
+   "qtdb/data/qt-database-1.0.0/sel47.dat"
+  ],
+  "teks": "Record `sel47` (WFDB format: sel47.hea, sel47.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150425 and sample 157971 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel49",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel49.hea",
+   "qtdb/data/qt-database-1.0.0/sel49.dat"
+  ],
+  "teks": "Record `sel49` (WFDB format: sel49.hea, sel49.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150287 and sample 157085 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel50",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel50.hea",
+   "qtdb/data/qt-database-1.0.0/sel50.dat"
+  ],
+  "teks": "Record `sel50` (WFDB format: sel50.hea, sel50.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150603 and sample 161026 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel52",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel52.hea",
+   "qtdb/data/qt-database-1.0.0/sel52.dat"
+  ],
+  "teks": "Record `sel52` (WFDB format: sel52.hea, sel52.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150304 and sample 154894 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel808",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel808.hea",
+   "qtdb/data/qt-database-1.0.0/sel808.dat"
+  ],
+  "teks": "Record `sel808` (WFDB format: sel808.hea, sel808.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150273 and sample 157748 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel840",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel840.hea",
+   "qtdb/data/qt-database-1.0.0/sel840.dat"
+  ],
+  "teks": "Record `sel840` (WFDB format: sel840.hea, sel840.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150279 and sample 156373 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel853",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel853.hea",
+   "qtdb/data/qt-database-1.0.0/sel853.dat"
+  ],
+  "teks": "Record `sel853` (WFDB format: sel853.hea, sel853.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150277 and sample 156187 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel871",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel871.hea",
+   "qtdb/data/qt-database-1.0.0/sel871.dat"
+  ],
+  "teks": "Record `sel871` (WFDB format: sel871.hea, sel871.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150442 and sample 157147 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel872",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel872.hea",
+   "qtdb/data/qt-database-1.0.0/sel872.dat"
+  ],
+  "teks": "Record `sel872` (WFDB format: sel872.hea, sel872.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150250 and sample 156925 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel873",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel873.hea",
+   "qtdb/data/qt-database-1.0.0/sel873.dat"
+  ],
+  "teks": "Record `sel873` (WFDB format: sel873.hea, sel873.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150288 and sample 157349 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel891",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel891.hea",
+   "qtdb/data/qt-database-1.0.0/sel891.dat"
+  ],
+  "teks": "Record `sel891` (WFDB format: sel891.hea, sel891.dat; two ECG channels). Consider only the beats whose R peak lies between sample 155507 and sample 159127 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sele0107",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sele0107.hea",
+   "qtdb/data/qt-database-1.0.0/sele0107.dat"
+  ],
+  "teks": "Record `sele0107` (WFDB format: sele0107.hea, sele0107.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150390 and sample 158636 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sele0112",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sele0112.hea",
+   "qtdb/data/qt-database-1.0.0/sele0112.dat"
+  ],
+  "teks": "Record `sele0112` (WFDB format: sele0112.hea, sele0112.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150485 and sample 160335 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sele0114",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sele0114.hea",
+   "qtdb/data/qt-database-1.0.0/sele0114.dat"
+  ],
+  "teks": "Record `sele0114` (WFDB format: sele0114.hea, sele0114.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150767 and sample 161009 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sele0303",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sele0303.hea",
+   "qtdb/data/qt-database-1.0.0/sele0303.dat"
+  ],
+  "teks": "Record `sele0303` (WFDB format: sele0303.hea, sele0303.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150392 and sample 156714 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sele0603",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sele0603.hea",
+   "qtdb/data/qt-database-1.0.0/sele0603.dat"
+  ],
+  "teks": "Record `sele0603` (WFDB format: sele0603.hea, sele0603.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150316 and sample 158274 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sele0604",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sele0604.hea",
+   "qtdb/data/qt-database-1.0.0/sele0604.dat"
+  ],
+  "teks": "Record `sele0604` (WFDB format: sele0604.hea, sele0604.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150228 and sample 155881 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sele0607",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sele0607.hea",
+   "qtdb/data/qt-database-1.0.0/sele0607.dat"
+  ],
+  "teks": "Record `sele0607` (WFDB format: sele0607.hea, sele0607.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150222 and sample 155345 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sele0609",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sele0609.hea",
+   "qtdb/data/qt-database-1.0.0/sele0609.dat"
+  ],
+  "teks": "Record `sele0609` (WFDB format: sele0609.hea, sele0609.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150316 and sample 154219 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "hrv_f1o01",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f1o01.hea",
+   "fantasia/data/fantasia-database-1.0.0/f1o01.dat"
+  ],
+  "teks": "Record `f1o01` (WFDB format: f1o01.hea, f1o01.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 0 and sample 74999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f1o02",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f1o02.hea",
+   "fantasia/data/fantasia-database-1.0.0/f1o02.dat"
+  ],
+  "teks": "Record `f1o02` (WFDB format: f1o02.hea, f1o02.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 75000 and sample 149999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f1o03",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f1o03.hea",
+   "fantasia/data/fantasia-database-1.0.0/f1o03.dat"
+  ],
+  "teks": "Record `f1o03` (WFDB format: f1o03.hea, f1o03.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 0 and sample 74999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f1o04",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f1o04.hea",
+   "fantasia/data/fantasia-database-1.0.0/f1o04.dat"
+  ],
+  "teks": "Record `f1o04` (WFDB format: f1o04.hea, f1o04.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 150000 and sample 224999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f1o05",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f1o05.hea",
+   "fantasia/data/fantasia-database-1.0.0/f1o05.dat"
+  ],
+  "teks": "Record `f1o05` (WFDB format: f1o05.hea, f1o05.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 0 and sample 74999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f1o06",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f1o06.hea",
+   "fantasia/data/fantasia-database-1.0.0/f1o06.dat"
+  ],
+  "teks": "Record `f1o06` (WFDB format: f1o06.hea, f1o06.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 0 and sample 74999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f1o07",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f1o07.hea",
+   "fantasia/data/fantasia-database-1.0.0/f1o07.dat"
+  ],
+  "teks": "Record `f1o07` (WFDB format: f1o07.hea, f1o07.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 0 and sample 74999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f1o08",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f1o08.hea",
+   "fantasia/data/fantasia-database-1.0.0/f1o08.dat"
+  ],
+  "teks": "Record `f1o08` (WFDB format: f1o08.hea, f1o08.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 0 and sample 74999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f1o09",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f1o09.hea",
+   "fantasia/data/fantasia-database-1.0.0/f1o09.dat"
+  ],
+  "teks": "Record `f1o09` (WFDB format: f1o09.hea, f1o09.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 0 and sample 74999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f1o10",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f1o10.hea",
+   "fantasia/data/fantasia-database-1.0.0/f1o10.dat"
+  ],
+  "teks": "Record `f1o10` (WFDB format: f1o10.hea, f1o10.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 0 and sample 74999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f1y02",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f1y02.hea",
+   "fantasia/data/fantasia-database-1.0.0/f1y02.dat"
+  ],
+  "teks": "Record `f1y02` (WFDB format: f1y02.hea, f1y02.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 450000 and sample 524999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f1y03",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f1y03.hea",
+   "fantasia/data/fantasia-database-1.0.0/f1y03.dat"
+  ],
+  "teks": "Record `f1y03` (WFDB format: f1y03.hea, f1y03.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 0 and sample 74999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f1y04",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f1y04.hea",
+   "fantasia/data/fantasia-database-1.0.0/f1y04.dat"
+  ],
+  "teks": "Record `f1y04` (WFDB format: f1y04.hea, f1y04.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 750000 and sample 824999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f1y05",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f1y05.hea",
+   "fantasia/data/fantasia-database-1.0.0/f1y05.dat"
+  ],
+  "teks": "Record `f1y05` (WFDB format: f1y05.hea, f1y05.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 1575000 and sample 1649999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f1y06",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f1y06.hea",
+   "fantasia/data/fantasia-database-1.0.0/f1y06.dat"
+  ],
+  "teks": "Record `f1y06` (WFDB format: f1y06.hea, f1y06.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 600000 and sample 674999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f1y08",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f1y08.hea",
+   "fantasia/data/fantasia-database-1.0.0/f1y08.dat"
+  ],
+  "teks": "Record `f1y08` (WFDB format: f1y08.hea, f1y08.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 75000 and sample 149999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f1y09",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f1y09.hea",
+   "fantasia/data/fantasia-database-1.0.0/f1y09.dat"
+  ],
+  "teks": "Record `f1y09` (WFDB format: f1y09.hea, f1y09.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 0 and sample 74999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f2o01",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f2o01.hea",
+   "fantasia/data/fantasia-database-1.0.0/f2o01.dat"
+  ],
+  "teks": "Record `f2o01` (WFDB format: f2o01.hea, f2o01.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 450000 and sample 524999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f2o02",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f2o02.hea",
+   "fantasia/data/fantasia-database-1.0.0/f2o02.dat"
+  ],
+  "teks": "Record `f2o02` (WFDB format: f2o02.hea, f2o02.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 300000 and sample 374999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f2o03",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f2o03.hea",
+   "fantasia/data/fantasia-database-1.0.0/f2o03.dat"
+  ],
+  "teks": "Record `f2o03` (WFDB format: f2o03.hea, f2o03.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 0 and sample 74999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f2o04",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f2o04.hea",
+   "fantasia/data/fantasia-database-1.0.0/f2o04.dat"
+  ],
+  "teks": "Record `f2o04` (WFDB format: f2o04.hea, f2o04.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 0 and sample 74999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f2o05",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f2o05.hea",
+   "fantasia/data/fantasia-database-1.0.0/f2o05.dat"
+  ],
+  "teks": "Record `f2o05` (WFDB format: f2o05.hea, f2o05.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 150000 and sample 224999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f2o06",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f2o06.hea",
+   "fantasia/data/fantasia-database-1.0.0/f2o06.dat"
+  ],
+  "teks": "Record `f2o06` (WFDB format: f2o06.hea, f2o06.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 0 and sample 74999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f2o07",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f2o07.hea",
+   "fantasia/data/fantasia-database-1.0.0/f2o07.dat"
+  ],
+  "teks": "Record `f2o07` (WFDB format: f2o07.hea, f2o07.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 0 and sample 74999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f2o09",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f2o09.hea",
+   "fantasia/data/fantasia-database-1.0.0/f2o09.dat"
+  ],
+  "teks": "Record `f2o09` (WFDB format: f2o09.hea, f2o09.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 150000 and sample 224999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f2o10",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f2o10.hea",
+   "fantasia/data/fantasia-database-1.0.0/f2o10.dat"
+  ],
+  "teks": "Record `f2o10` (WFDB format: f2o10.hea, f2o10.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 75000 and sample 149999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f2y01",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f2y01.hea",
+   "fantasia/data/fantasia-database-1.0.0/f2y01.dat"
+  ],
+  "teks": "Record `f2y01` (WFDB format: f2y01.hea, f2y01.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 525000 and sample 599999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f2y02",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f2y02.hea",
+   "fantasia/data/fantasia-database-1.0.0/f2y02.dat"
+  ],
+  "teks": "Record `f2y02` (WFDB format: f2y02.hea, f2y02.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 0 and sample 99899 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f2y03",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f2y03.hea",
+   "fantasia/data/fantasia-database-1.0.0/f2y03.dat"
+  ],
+  "teks": "Record `f2y03` (WFDB format: f2y03.hea, f2y03.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 0 and sample 74999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f2y04",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f2y04.hea",
+   "fantasia/data/fantasia-database-1.0.0/f2y04.dat"
+  ],
+  "teks": "Record `f2y04` (WFDB format: f2y04.hea, f2y04.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 0 and sample 74999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f2y05",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f2y05.hea",
+   "fantasia/data/fantasia-database-1.0.0/f2y05.dat"
+  ],
+  "teks": "Record `f2y05` (WFDB format: f2y05.hea, f2y05.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 75000 and sample 149999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f2y06",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f2y06.hea",
+   "fantasia/data/fantasia-database-1.0.0/f2y06.dat"
+  ],
+  "teks": "Record `f2y06` (WFDB format: f2y06.hea, f2y06.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 0 and sample 74999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f2y07",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f2y07.hea",
+   "fantasia/data/fantasia-database-1.0.0/f2y07.dat"
+  ],
+  "teks": "Record `f2y07` (WFDB format: f2y07.hea, f2y07.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 150000 and sample 224999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "hrv_f2y10",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f2y10.hea",
+   "fantasia/data/fantasia-database-1.0.0/f2y10.dat"
+  ],
+  "teks": "Record `f2y10` (WFDB format: f2y10.hea, f2y10.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 375000 and sample 449999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report: mean heart rate in beats per minute (60000 / mean NN in ms); SDNN in ms (sample standard deviation of NN); RMSSD in ms; pNN50 in percent (share of successive NN differences greater than 50 ms); LF power (0.04-0.15 Hz) and HF power (0.15-0.40 Hz) of the NN series, both in ms^2; and LF/HF. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>, \"pnn50_pct\": <number>, \"lf_ms2\": <number>, \"hf_ms2\": <number>, \"lf_hf\": <number>}."
+ },
+ {
+  "id": "jebak_ektopik_106",
+  "berkas": [
+   "mitdb/data/mit-bih-arrhythmia-database-1.0.0/106.hea",
+   "mitdb/data/mit-bih-arrhythmia-database-1.0.0/106.dat"
+  ],
+  "teks": "Record `106` (WFDB format: 106.hea, 106.dat). Use the channel named `MLII`. Consider only the beats whose R peak lies between sample 432082 and sample 539713 (inclusive, 0-based sample index). Report: mean heart rate in beats per minute over all beats (60000 / mean of all successive R-R intervals in ms); and SDNN and RMSSD in ms computed on NN intervals only, i.e. intervals between two successive beats that are both normal sinus beats (exclude every interval that starts or ends at an ectopic beat). Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_nn_ms\": <number>, \"rmssd_nn_ms\": <number>}."
+ },
+ {
+  "id": "jebak_ektopik_116",
+  "berkas": [
+   "mitdb/data/mit-bih-arrhythmia-database-1.0.0/116.hea",
+   "mitdb/data/mit-bih-arrhythmia-database-1.0.0/116.dat"
+  ],
+  "teks": "Record `116` (WFDB format: 116.hea, 116.dat). Use the channel named `MLII`. Consider only the beats whose R peak lies between sample 272 and sample 107915 (inclusive, 0-based sample index). Report: mean heart rate in beats per minute over all beats (60000 / mean of all successive R-R intervals in ms); and SDNN and RMSSD in ms computed on NN intervals only, i.e. intervals between two successive beats that are both normal sinus beats (exclude every interval that starts or ends at an ectopic beat). Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_nn_ms\": <number>, \"rmssd_nn_ms\": <number>}."
+ },
+ {
+  "id": "jebak_ektopik_119",
+  "berkas": [
+   "mitdb/data/mit-bih-arrhythmia-database-1.0.0/119.hea",
+   "mitdb/data/mit-bih-arrhythmia-database-1.0.0/119.dat"
+  ],
+  "teks": "Record `119` (WFDB format: 119.hea, 119.dat). Use the channel named `MLII`. Consider only the beats whose R peak lies between sample 299 and sample 107585 (inclusive, 0-based sample index). Report: mean heart rate in beats per minute over all beats (60000 / mean of all successive R-R intervals in ms); and SDNN and RMSSD in ms computed on NN intervals only, i.e. intervals between two successive beats that are both normal sinus beats (exclude every interval that starts or ends at an ectopic beat). Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_nn_ms\": <number>, \"rmssd_nn_ms\": <number>}."
+ },
+ {
+  "id": "jebak_ektopik_209",
+  "berkas": [
+   "mitdb/data/mit-bih-arrhythmia-database-1.0.0/209.hea",
+   "mitdb/data/mit-bih-arrhythmia-database-1.0.0/209.dat"
+  ],
+  "teks": "Record `209` (WFDB format: 209.hea, 209.dat). Use the channel named `MLII`. Consider only the beats whose R peak lies between sample 324173 and sample 431899 (inclusive, 0-based sample index). Report: mean heart rate in beats per minute over all beats (60000 / mean of all successive R-R intervals in ms); and SDNN and RMSSD in ms computed on NN intervals only, i.e. intervals between two successive beats that are both normal sinus beats (exclude every interval that starts or ends at an ectopic beat). Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_nn_ms\": <number>, \"rmssd_nn_ms\": <number>}."
+ },
+ {
+  "id": "jebak_ektopik_215",
+  "berkas": [
+   "mitdb/data/mit-bih-arrhythmia-database-1.0.0/215.hea",
+   "mitdb/data/mit-bih-arrhythmia-database-1.0.0/215.dat"
+  ],
+  "teks": "Record `215` (WFDB format: 215.hea, 215.dat). Use the channel named `MLII`. Consider only the beats whose R peak lies between sample 108152 and sample 215940 (inclusive, 0-based sample index). Report: mean heart rate in beats per minute over all beats (60000 / mean of all successive R-R intervals in ms); and SDNN and RMSSD in ms computed on NN intervals only, i.e. intervals between two successive beats that are both normal sinus beats (exclude every interval that starts or ends at an ectopic beat). Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_nn_ms\": <number>, \"rmssd_nn_ms\": <number>}."
+ },
+ {
+  "id": "jebak_ektopik_228",
+  "berkas": [
+   "mitdb/data/mit-bih-arrhythmia-database-1.0.0/228.hea",
+   "mitdb/data/mit-bih-arrhythmia-database-1.0.0/228.dat"
+  ],
+  "teks": "Record `228` (WFDB format: 228.hea, 228.dat). Use the channel named `MLII`. Consider only the beats whose R peak lies between sample 324234 and sample 431869 (inclusive, 0-based sample index). Report: mean heart rate in beats per minute over all beats (60000 / mean of all successive R-R intervals in ms); and SDNN and RMSSD in ms computed on NN intervals only, i.e. intervals between two successive beats that are both normal sinus beats (exclude every interval that starts or ends at an ectopic beat). Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_nn_ms\": <number>, \"rmssd_nn_ms\": <number>}."
+ },
+ {
+  "id": "jebak_laju_tr01",
+  "berkas": [
+   "agenekg_turunan/tr01.hea",
+   "agenekg_turunan/tr01.dat"
+  ],
+  "teks": "Record `tr01` (WFDB format: tr01.hea, tr01.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 30000 and sample 179999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report mean heart rate in beats per minute (60000 / mean NN in ms), SDNN in ms (sample standard deviation of NN) and RMSSD in ms. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>}."
+ },
+ {
+  "id": "jebak_laju_tr02",
+  "berkas": [
+   "agenekg_turunan/tr02.hea",
+   "agenekg_turunan/tr02.dat"
+  ],
+  "teks": "Record `tr02` (WFDB format: tr02.hea, tr02.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 0 and sample 149999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report mean heart rate in beats per minute (60000 / mean NN in ms), SDNN in ms (sample standard deviation of NN) and RMSSD in ms. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>}."
+ },
+ {
+  "id": "jebak_laju_tr03",
+  "berkas": [
+   "agenekg_turunan/tr03.hea",
+   "agenekg_turunan/tr03.dat"
+  ],
+  "teks": "Record `tr03` (WFDB format: tr03.hea, tr03.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 0 and sample 149999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report mean heart rate in beats per minute (60000 / mean NN in ms), SDNN in ms (sample standard deviation of NN) and RMSSD in ms. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>}."
+ },
+ {
+  "id": "jebak_laju_tr04",
+  "berkas": [
+   "agenekg_turunan/tr04.hea",
+   "agenekg_turunan/tr04.dat"
+  ],
+  "teks": "Record `tr04` (WFDB format: tr04.hea, tr04.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 0 and sample 107999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report mean heart rate in beats per minute (60000 / mean NN in ms), SDNN in ms (sample standard deviation of NN) and RMSSD in ms. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>}."
+ },
+ {
+  "id": "jebak_laju_tr05",
+  "berkas": [
+   "agenekg_turunan/tr05.hea",
+   "agenekg_turunan/tr05.dat"
+  ],
+  "teks": "Record `tr05` (WFDB format: tr05.hea, tr05.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 21600 and sample 129599 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report mean heart rate in beats per minute (60000 / mean NN in ms), SDNN in ms (sample standard deviation of NN) and RMSSD in ms. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>}."
+ },
+ {
+  "id": "jebak_kanal_tr06",
+  "berkas": [
+   "agenekg_turunan/tr06.hea",
+   "agenekg_turunan/tr06.dat"
+  ],
+  "teks": "Record `tr06` (WFDB format: tr06.hea, tr06.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 15000 and sample 89999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report mean heart rate in beats per minute (60000 / mean NN in ms), SDNN in ms (sample standard deviation of NN) and RMSSD in ms. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>}."
+ },
+ {
+  "id": "jebak_kanal_tr07",
+  "berkas": [
+   "agenekg_turunan/tr07.hea",
+   "agenekg_turunan/tr07.dat"
+  ],
+  "teks": "Record `tr07` (WFDB format: tr07.hea, tr07.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 0 and sample 74999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report mean heart rate in beats per minute (60000 / mean NN in ms), SDNN in ms (sample standard deviation of NN) and RMSSD in ms. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>}."
+ },
+ {
+  "id": "jebak_kanal_tr08",
+  "berkas": [
+   "agenekg_turunan/tr08.hea",
+   "agenekg_turunan/tr08.dat"
+  ],
+  "teks": "Record `tr08` (WFDB format: tr08.hea, tr08.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 0 and sample 74999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report mean heart rate in beats per minute (60000 / mean NN in ms), SDNN in ms (sample standard deviation of NN) and RMSSD in ms. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>}."
+ },
+ {
+  "id": "jebak_kanal_tr09",
+  "berkas": [
+   "agenekg_turunan/tr09.hea",
+   "agenekg_turunan/tr09.dat"
+  ],
+  "teks": "Record `tr09` (WFDB format: tr09.hea, tr09.dat). Use the channel named `ECG`. Consider only the beats whose R peak lies between sample 15000 and sample 89999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report mean heart rate in beats per minute (60000 / mean NN in ms), SDNN in ms (sample standard deviation of NN) and RMSSD in ms. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>}."
+ },
+ {
+  "id": "jebak_takada_f2y05",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f2y05.hea",
+   "fantasia/data/fantasia-database-1.0.0/f2y05.dat"
+  ],
+  "teks": "Record `f2y05` (WFDB format: f2y05.hea, f2y05.dat). Use the channel named `V5`. Consider only the beats whose R peak lies between sample 75000 and sample 149999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report mean heart rate in beats per minute (60000 / mean NN in ms), SDNN in ms (sample standard deviation of NN) and RMSSD in ms. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>}."
+ },
+ {
+  "id": "jebak_takada_f1y06",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f1y06.hea",
+   "fantasia/data/fantasia-database-1.0.0/f1y06.dat"
+  ],
+  "teks": "Record `f1y06` (WFDB format: f1y06.hea, f1y06.dat). Use the channel named `V5`. Consider only the beats whose R peak lies between sample 600000 and sample 674999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report mean heart rate in beats per minute (60000 / mean NN in ms), SDNN in ms (sample standard deviation of NN) and RMSSD in ms. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>}."
+ },
+ {
+  "id": "jebak_takada_f1o07",
+  "berkas": [
+   "fantasia/data/fantasia-database-1.0.0/f1o07.hea",
+   "fantasia/data/fantasia-database-1.0.0/f1o07.dat"
+  ],
+  "teks": "Record `f1o07` (WFDB format: f1o07.hea, f1o07.dat). Use the channel named `V5`. Consider only the beats whose R peak lies between sample 0 and sample 74999 (inclusive, 0-based sample index); NN intervals are the intervals between successive such beats. Report mean heart rate in beats per minute (60000 / mean NN in ms), SDNN in ms (sample standard deviation of NN) and RMSSD in ms. Answer as FINAL: {\"hr_bpm\": <number>, \"sdnn_ms\": <number>, \"rmssd_ms\": <number>}."
+ },
+ {
+  "id": "jebak_takada_sel100",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel100.hea",
+   "qtdb/data/qt-database-1.0.0/sel100.dat"
+  ],
+  "teks": "Record `sel100` (WFDB format: sel100.hea, sel100.dat; two ECG channels). Consider only the beats whose R peak lies between sample 230000 and sample 240000 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "jebak_takada_sel301",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel301.hea",
+   "qtdb/data/qt-database-1.0.0/sel301.dat"
+  ],
+  "teks": "Record `sel301` (WFDB format: sel301.hea, sel301.dat; two ECG channels). Consider only the beats whose R peak lies between sample 229999 and sample 239999 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ }
+]

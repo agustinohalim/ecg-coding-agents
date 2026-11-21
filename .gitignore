@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Data and agent transcripts never enter this repository
+*.csv
+*.npy
+*.npz
+*.dat
+*.hea
+*.atr
+*.q1c
+*.q2c
+agenekg_turunan/
+runs/
+
+# Credentials
+.env
+*.key

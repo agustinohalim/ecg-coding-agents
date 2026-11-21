@@ -1,0 +1,127 @@
+Installed library reference (neurokit2 0.3.0, wfdb 4.3.1, scipy 1.16.3, numpy 2.3.4). `import neurokit2 as nk`.
+Call only functions listed here, or check a name with dir() or help() before using it.
+A wfdb Record has the attributes p_signal, fs, sig_name, units, sig_len, n_sig.
+
+wfdb.rdrecord(record_name, sampfrom=0, sampto=None, channels=None, physical=True, pn_dir=None, m2s=True, smooth_frames=True, ignore_skew=False, return_res=64, force_channels=True, channel_names=None, warn_empty=False)
+    Read a WFDB record and return the signal and record descriptors as attributes in a Record or MultiRecord object.
+    Returns:
+      record : Record or MultiRecord
+      The WFDB Record or MultiRecord object representing the contents
+      of the record read.
+
+wfdb.rdheader(record_name, pn_dir=None, rd_segments=False)
+    Read a WFDB header file and return a `Record` or `MultiRecord` object with the record descriptors as attributes.
+    Returns:
+      record : Record or MultiRecord
+      The WFDB Record or MultiRecord object representing the contents
+      of the header read.
+
+nk.ecg_clean(ecg_signal, sampling_rate=1000, method='neurokit', **kwargs)
+    **ECG Signal Cleaning**
+    Returns:
+      array
+      Vector containing the cleaned ECG signal.
+
+nk.ecg_peaks(ecg_cleaned, sampling_rate=1000, method='neurokit', correct_artifacts=False, show=False, **kwargs)
+    **Find R-peaks in an ECG signal**
+    Returns:
+      signals : DataFrame
+      A DataFrame of same length as the input signal in which occurrences of R-peaks marked as
+      ``1`` in a list of zeros with the same length as ``ecg_cleaned``. Accessible with the keys
+      ``"ECG_R_Peaks"``.
+      info : dict
+      A dictionary containing additional information, in this case the samples at which R-peaks
+      occur, accessible with the key ``"ECG_R_Peaks"``, as well as the signals' sampling rate,
+      accessible with the key ``"sampling_rate"``.
+
+nk.ecg_delineate(ecg_cleaned, rpeaks=None, sampling_rate=1000, method='dwt', show=False, show_type='peaks', check=False, **kwargs)
+    **Delineate QRS complex**
+    Returns:
+      waves : dict
+      A dictionary containing additional information.
+      For derivative method, the dictionary contains the samples at which P-peaks, Q-peaks,
+      S-peaks, T-peaks, P-onsets and T-offsets occur, accessible with the keys ``"ECG_P_Peaks"``,
+      ``"ECG_Q_Peaks"``, ``"ECG_S_Peaks"``, ``"ECG_T_Peaks"``, ``"ECG_P_Onsets"``,
+      ``"ECG_T_Offsets"``, respectively.
+      For the wavelet and prominence methods, in addition to the above information, the dictionary contains the
+      samples at which QRS-onsets and QRS-offsets occur, accessible with the key
+      ``"ECG_P_Peaks"``, ``"ECG_T_Peaks"``, ``"ECG_P_Onsets"``, ``"ECG_P_Offsets"``,
+      ``"ECG_Q_Peaks"``, ``"ECG_S_Peaks"``, ``"ECG_T_Onsets"``, ``"ECG_T_Offsets"``,
+      ``"ECG_R_Onsets"``, ``"ECG_R_Offsets"``, respectively.
+      signals : DataFrame
+      A DataFrame of same length as the input signal in which occurrences of
+      peaks, onsets and offsets marked as "1" in a list of zeros.
+
+nk.ecg_rate(peaks, sampling_rate=1000, desired_length=(), interpolation_method='monotone_cubic', show=False)
+    **Compute Signal Rate**
+    Returns:
+      array
+      A vector containing the rate (peaks per minute).
+
+nk.hrv_time(peaks, sampling_rate=1000, show=False, **kwargs)
+    **Computes time-domain indices of Heart Rate Variability (HRV)**
+    Returns:
+      DataFrame
+      Contains time domain HRV metrics:
+      * **MeanNN**: The mean of the RR intervals.
+      * **SDNN**: The standard deviation of the RR intervals.
+      * **SDANN1**, **SDANN2**, **SDANN5**: The standard deviation of average RR intervals
+      extracted from n-minute segments of time series data (1, 2 and 5 by default). Note that
+      these indices require a minimal duration of signal to be computed (3, 6 and 15 minutes
+      respectively) and will be silently skipped if the data provided is too short.
+      * **SDNNI1**, **SDNNI2**, **SDNNI5**: The mean of the standard deviations of RR intervals
+      extracted from n-minute segments of time series data (1, 2 and 5 by default). Note that
+      these indices require a minimal duration of signal to be computed (3, 6 and 15 minutes
+      respectively) and will be silently skipped if the data provided is too short.
+      * **RMSSD**: The square root of the mean of the squared successive differences between
+      adjacent RR intervals. It is equivalent (although on another scale) to SD1, and
+
+nk.hrv_frequency(peaks, sampling_rate=1000, ulf=(0, 0.0033), vlf=(0.0033, 0.04), lf=(0.04, 0.15), hf=(0.15, 0.4), vhf=(0.4, 0.5), psd_method='welch', show=False, silent=True, normalize=True, order_criteria=None, interpolation_rate=100, **kwargs)
+    **Computes frequency-domain indices of Heart Rate Variability (HRV)**
+    Returns:
+      DataFrame
+      DataFrame consisting of the computed HRV frequency metrics, which includes:
+      .. codebookadd::
+      HRV_ULF|The spectral power of ultra low frequencies (by default, .0 to .0033 Hz).                 Very long signals are required for this to index to be extracted, otherwise,                 will return NaN.
+      HRV_VLF|The spectral power of very low frequencies (by default, .0033 to .04 Hz).
+      HRV_LF|The spectral power of low frequencies (by default, .04 to .15 Hz).
+      HRV_HF|The spectral power of high frequencies (by default, .15 to .4 Hz).
+      HRV_VHF|The spectral power of very high frequencies (by default, .4 to .5 Hz).
+      HRV_TP|The total spectral power.
+      HRV_LFHF|The ratio obtained by dividing the low frequency power by the high frequency                 power.
+      HRV_LFn|The normalized low frequency, obtained by dividing the low frequency power by                 the total power.
+      HRV_HFn|The normalized high frequency, obtained by dividing the low frequency power by                 the total power.
+      HRV_LnHF|The log transformed HF.
+
+nk.intervals_to_peaks(intervals, intervals_time=None, sampling_rate=1000)
+    **Convert intervals to peaks**
+    Returns:
+      np.ndarray
+      An array of integer values indicating the peak indices,
+      with the first peak occurring at sample point 0.
+
+scipy.signal.find_peaks(x, height=None, threshold=None, distance=None, prominence=None, width=None, wlen=None, rel_height=0.5, plateau_size=None)
+    Find peaks inside a signal based on peak properties.
+    Returns:
+      peaks : ndarray
+      Indices of peaks in `x` that satisfy all given conditions.
+      properties : dict
+      A dictionary containing properties of the returned peaks which were
+      calculated as intermediate results during evaluation of the specified
+      conditions:
+      * 'peak_heights'
+      If `height` is given, the height of each peak in `x`.
+      * 'left_thresholds', 'right_thresholds'
+      If `threshold` is given, these keys contain a peaks vertical
+      distance to its neighbouring samples.
+      * 'prominences', 'right_bases', 'left_bases'
+      If `prominence` is given, these keys are accessible. See
+      `peak_prominences` for a description of their content.
+
+scipy.signal.welch(x, fs=1.0, window='hann', nperseg=None, noverlap=None, nfft=None, detrend='constant', return_onesided=True, scaling='density', axis=-1, average='mean')
+    Estimate power spectral density using Welch's method.
+    Returns:
+      f : ndarray
+      Array of sample frequencies.
+      Pxx : ndarray
+      Power spectral density or power spectrum of x.

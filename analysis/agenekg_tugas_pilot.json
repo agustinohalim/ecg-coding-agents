@@ -1,0 +1,42 @@
+[
+ {
+  "id": "pilot_qt_sele0111",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sele0111.hea",
+   "qtdb/data/qt-database-1.0.0/sele0111.dat"
+  ],
+  "teks": "Record `sele0111` (WFDB format: sele0111.hea, sele0111.dat). Use signal channel 0. Consider only the beats whose R peak lies between sample 150440 and sample 157637 (inclusive, 0-based sample index). For each such beat, QT = time from QRS onset to the end of the T wave. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, and the mean Bazett-corrected QTc (QT / sqrt(RR)) in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>}."
+ },
+ {
+  "id": "pilot_qt_sele0133",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sele0133.hea",
+   "qtdb/data/qt-database-1.0.0/sele0133.dat"
+  ],
+  "teks": "Record `sele0133` (WFDB format: sele0133.hea, sele0133.dat). Use signal channel 0. Consider only the beats whose R peak lies between sample 150475 and sample 158176 (inclusive, 0-based sample index). For each such beat, QT = time from QRS onset to the end of the T wave. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, and the mean Bazett-corrected QTc (QT / sqrt(RR)) in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>}."
+ },
+ {
+  "id": "pilot_qt_sel48",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel48.hea",
+   "qtdb/data/qt-database-1.0.0/sel48.dat"
+  ],
+  "teks": "Record `sel48` (WFDB format: sel48.hea, sel48.dat). Use signal channel 0. Consider only the beats whose R peak lies between sample 150162 and sample 154730 (inclusive, 0-based sample index). For each such beat, QT = time from QRS onset to the end of the T wave. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, and the mean Bazett-corrected QTc (QT / sqrt(RR)) in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>}."
+ },
+ {
+  "id": "pilot_qt_sel811",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel811.hea",
+   "qtdb/data/qt-database-1.0.0/sel811.dat"
+  ],
+  "teks": "Record `sel811` (WFDB format: sel811.hea, sel811.dat). Use signal channel 0. Consider only the beats whose R peak lies between sample 150324 and sample 159556 (inclusive, 0-based sample index). For each such beat, QT = time from QRS onset to the end of the T wave. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, and the mean Bazett-corrected QTc (QT / sqrt(RR)) in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>}."
+ },
+ {
+  "id": "pilot_qt_sele0411",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sele0411.hea",
+   "qtdb/data/qt-database-1.0.0/sele0411.dat"
+  ],
+  "teks": "Record `sele0411` (WFDB format: sele0411.hea, sele0411.dat). Use signal channel 0. Consider only the beats whose R peak lies between sample 150243 and sample 155749 (inclusive, 0-based sample index). For each such beat, QT = time from QRS onset to the end of the T wave. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, and the mean Bazett-corrected QTc (QT / sqrt(RR)) in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>}."
+ }
+]

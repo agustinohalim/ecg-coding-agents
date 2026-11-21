@@ -1,0 +1,147 @@
+"""Pembanding NeuroKit2 tanpa agen untuk AgenEKG (eksploratif; Prareg_AgenEKG.md, penyimpangan 19 Nov 2026).
+
+Pipa tetap tanpa LLM dijalankan di kontainer `agenekg-py:1` yang sama dengan agen (neurokit2 0.3.0, tanpa
+jaringan) pada semua tugas yang bisa dijawab. Keluarannya ditulis dalam bentuk log agen (`<tugas>_u1.json`,
+satu "giliran" berkode keluar 0, FINAL = jawaban JSON), sehingga dinilai `agenekg_analisis.py` dengan rujukan dan
+toleransi yang sama.
+
+  QT     per kanal: ecg_clean + ecg_peaks + ecg_delineate(method); denyut = puncak R kanal pertama di jendela;
+         QT = awal QRS paling awal sampai akhir T paling akhir di kedua kanal (puncak R antarkanal dipasangkan
+         bila berjarak <= 50 ms); RR dari puncak R kanal pertama sebelumnya; QTc dilewati untuk denyut pertama.
+  HRV    kanal bernama di teks tugas; ecg_clean + ecg_peaks bawaan; NN = selang antar-puncak di jendela, tanpa
+         koreksi ektopik; SDNN (ddof 1), RMSSD, pNN50; LF/HF dari hrv_frequency(normalize=False).
+
+Pakai:
+    python -X utf8 Riset/EKG/agenekg_dasar_nk.py --metode dwt --keluar C:/Data/AgenEKG_runs/dasar_nk_dwt
+"""
+import argparse
+import json
+import shutil
+import subprocess
+import tempfile
+from pathlib import Path
+
+DIR = Path(__file__).resolve().parent
+GAMBAR = "agenekg-py:1"
+
+DALAM = r'''
+import json, re, sys, traceback
+import numpy as np, wfdb, neurokit2 as nk
+
+import os
+metode = sys.argv[1]
+ke, dari = (int(x) for x in (sys.argv[2] if len(sys.argv) > 2 else "0/1").split("/"))
+tugas = json.load(open("/work/tugas.json", encoding="utf-8"))
+ruj = {r["id"]: r for r in json.load(open("/work/rujukan.json", encoding="utf-8"))}
+
+
+def jendela(teks):
+    m = re.search(r"between sample (\d+) and sample (\d+)", teks)
+    return int(m.group(1)), int(m.group(2))
+
+
+def puncak(x, fs):
+    bersih = nk.ecg_clean(x, sampling_rate=fs)
+    _, info = nk.ecg_peaks(bersih, sampling_rate=fs)
+    return bersih, np.asarray(info["ECG_R_Peaks"], dtype=int)
+
+
+def qt(rec, a, b):
+    fs, sig = rec.fs, rec.p_signal
+    per_kanal = []
+    for ch in range(sig.shape[1]):
+        bersih, r = puncak(sig[:, ch], fs)
+        _, w = nk.ecg_delineate(bersih, r, sampling_rate=fs, method=metode)
+        on = np.asarray(w.get("ECG_R_Onsets", w.get("ECG_Q_Peaks")), dtype=float)
+        off = np.asarray(w["ECG_T_Offsets"], dtype=float)
+        per_kanal.append((r, on, off))
+    r0 = per_kanal[0][0]
+    idx = np.where((r0 >= a) & (r0 <= b))[0]
+    qts, qtcb, qtcf = [], [], []
+    for j, i in enumerate(idx):
+        ons, offs = [], []
+        for r, on, off in per_kanal:
+            k = int(np.argmin(np.abs(r - r0[i])))
+            if abs(r[k] - r0[i]) <= 0.05 * fs:
+                if k < len(on) and np.isfinite(on[k]):
+                    ons.append(on[k])
+                if k < len(off) and np.isfinite(off[k]):
+                    offs.append(off[k])
+        if not ons or not offs:
+            continue
+        q = (max(offs) - min(ons)) / fs * 1000.0
+        if q <= 0:
+            continue
+        qts.append(q)
+        if j > 0 and i > 0:
+            rr = (r0[i] - r0[i - 1]) / fs
+            if rr < 2.0:
+                qtcb.append(q / np.sqrt(rr))
+                qtcf.append(q / np.cbrt(rr))
+    return {"qt_ms": float(np.mean(qts)), "qtcb_ms": float(np.mean(qtcb)), "qtcf_ms": float(np.mean(qtcf))}
+
+
+def hrv(rec, a, b, nama, kunci):
+    fs = rec.fs
+    ch = rec.sig_name.index(nama)
+    _, r = puncak(rec.p_signal[:, ch], fs)
+    r = r[(r >= a) & (r <= b)]
+    nn = np.diff(r) / fs * 1000.0
+    d = np.diff(nn)
+    nilai = {"hr_bpm": 60000.0 / nn.mean(), "sdnn_ms": nn.std(ddof=1), "rmssd_ms": np.sqrt(np.mean(d ** 2)),
+             "pnn50_pct": 100.0 * np.mean(np.abs(d) > 50)}
+    if "lf_ms2" in kunci:
+        f = nk.hrv_frequency(r, sampling_rate=fs, normalize=False)
+        nilai.update(lf_ms2=f["HRV_LF"].iloc[0], hf_ms2=f["HRV_HF"].iloc[0], lf_hf=f["HRV_LFHF"].iloc[0])
+    nilai["sdnn_nn_ms"], nilai["rmssd_nn_ms"] = nilai["sdnn_ms"], nilai["rmssd_ms"]
+    return {k: float(nilai[k]) for k in kunci}
+
+
+for nomor, t in enumerate(tugas):
+    r = ruj[t["id"]]
+    if r["nilai"].get("unanswerable") or nomor % dari != ke or os.path.exists("/out/%s_u1.json" % t["id"]):
+        continue
+    giliran = {"model": "(pipa tetap NeuroKit2, metode %s)" % metode, "kode_keluar": "0", "keluaran": ""}
+    final = None
+    try:
+        rec = wfdb.rdrecord("/data/" + t["berkas"][0][:-4])
+        a, b = jendela(t["teks"])
+        if r["jenis"] == "qt":
+            jawab = qt(rec, a, b)
+        else:
+            nama = re.search(r"channel named `([^`]+)`", t["teks"]).group(1)
+            jawab = hrv(rec, a, b, nama, list(r["nilai"]))
+        final = json.dumps(jawab)
+    except Exception:
+        giliran.update(kode_keluar="1", keluaran=traceback.format_exc()[-4000:])
+    log = {"tugas": t["id"], "model": "neurokit2-dasar-" + metode, "ulang": 1, "giliran": [giliran], "final": final}
+    json.dump(log, open("/out/%s_u1.json" % t["id"], "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    print(t["id"], "ok" if final else "GAGAL", flush=True)
+'''
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--metode", default="dwt", choices=["dwt", "peak", "cwt"])
+    ap.add_argument("--keluar", required=True)
+    ap.add_argument("--bagian", default="0/1", help="i/n: kerjakan tugas ke-k dengan k mod n = i (pipa deterministik, "
+                    "jadi pembagian tidak mengubah hasil); tugas yang keluarannya sudah ada dilewati")
+    ap.add_argument("--data", default="C:/Data/PhysioNet")
+    ap.add_argument("--tugas", default=str(DIR / "agenekg_tugas.json"))
+    ap.add_argument("--rujukan", default=str(DIR / "agenekg_rujukan.json"))
+    a = ap.parse_args()
+    keluar = Path(a.keluar)
+    keluar.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory() as kerja:
+        kerja = Path(kerja)
+        (kerja / "dasar.py").write_text(DALAM, encoding="utf-8")
+        shutil.copyfile(a.tugas, kerja / "tugas.json")
+        shutil.copyfile(a.rujukan, kerja / "rujukan.json")
+        perintah = ["docker", "run", "--rm", "--network", "none", "--memory", "4g", "--cpus", "2",
+                    "-v", f"{kerja.resolve()}:/work:ro", "-v", f"{Path(a.data).resolve()}:/data:ro",
+                    "-v", f"{keluar.resolve()}:/out", "-w", "/work", GAMBAR, "python", "dasar.py", a.metode, a.bagian]
+        subprocess.run(perintah, check=True)
+
+
+if __name__ == "__main__":
+    main()

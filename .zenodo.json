@@ -1,0 +1,25 @@
+{
+  "title": "ecg-coding-agents: small local coding agents computing QT, QTc, and HRV from PhysioNet ECG recordings",
+  "upload_type": "software",
+  "description": "Harness, task set, expert-derived references, scoring, and aggregate results for a preregistered evaluation of language-model coding agents that write and run Python to measure QT, corrected QT, and frequency-domain heart-rate variability from PhysioNet recordings (QT Database, Fantasia, MIT-BIH Arrhythmia Database). Three open-weight models (Qwen2.5-Coder-7B-Instruct, Qwen2.5-Coder-3B-Instruct, Llama-3.1-8B-Instruct) run 99 tasks in a network-free container; a library-only NeuroKit2 pipeline is the baseline, and an exploratory arm appends a reference of the installed library functions to the system prompt. No PhysioNet data are included.",
+  "creators": [
+    {
+      "name": "Halim, Agustino",
+      "orcid": "0009-0008-4388-1174",
+      "affiliation": "Universitas OSO"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "ECG",
+    "QT interval",
+    "heart rate variability",
+    "large language models",
+    "coding agents",
+    "LLM evaluation",
+    "NeuroKit2",
+    "PhysioNet",
+    "reproducibility"
+  ],
+  "version": "1.0.0"
+}

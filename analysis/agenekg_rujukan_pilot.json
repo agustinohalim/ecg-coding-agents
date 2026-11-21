@@ -1,0 +1,32 @@
+[
+ {
+  "id": "pilot_qt_sele0111",
+  "qt_ms": 412.0,
+  "qtcb_ms": 413.69,
+  "denyut": 30
+ },
+ {
+  "id": "pilot_qt_sele0133",
+  "qt_ms": 449.07,
+  "qtcb_ms": 436.5,
+  "denyut": 30
+ },
+ {
+  "id": "pilot_qt_sel48",
+  "qt_ms": 430.13,
+  "qtcb_ms": 543.41,
+  "denyut": 30
+ },
+ {
+  "id": "pilot_qt_sel811",
+  "qt_ms": 450.13,
+  "qtcb_ms": 399.41,
+  "denyut": 30
+ },
+ {
+  "id": "pilot_qt_sele0411",
+  "qt_ms": 367.73,
+  "qtcb_ms": 421.84,
+  "denyut": 30
+ }
+]
