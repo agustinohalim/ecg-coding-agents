@@ -1,7 +1,7 @@
 # ecg-coding-agents
 
-Code, task set, references, and aggregate results for the manuscript ⬜ *(title pending)* (Halim ⬜ co-authors;
-in preparation). The study asks whether code written by small, locally run language-model agents returns QT,
+Code, task set, references, and aggregate results for the manuscript ⬜ *(title pending)* (Halim, in
+preparation). The study asks whether code written by small, locally run language-model agents returns QT,
 corrected QT, and frequency-domain heart-rate variability (HRV) values within pre-specified tolerances of
 references derived from expert annotations.
 
@@ -28,7 +28,10 @@ archived separately ⬜ (Zenodo DOI).
 | `analysis/agenekg_agen_api.py`, `agenekg_api_ringkas.py`, `agenekg_api_ringkas.txt` | API-documentation arm: the same harness with the library reference appended to the system prompt; the generator runs inside the container |
 | `analysis/agenekg_dasar_nk.py` | Library-only NeuroKit2 baseline (DWT, peak, CWT delineation) |
 | `analysis/agenekg_nilai.py`, `agenekg_analisis.py` | Scoring against the references, error taxonomy E1–E8, bootstrap CIs clustered by record, paired sign-flip permutation tests |
+| `analysis/agenekg_kode_ulang_bahan.py`, `agenekg_kode_ulang_nilai.py` | Blinded recoding material for the 10 % sample, and agreement (Cohen's kappa) with the automatic codes |
 | `results/` | Outputs of `agenekg_analisis.py`: main runs (`analisis_utama`), baseline (`analisis_dasar_nk`), API-documentation arm per model (`analisis_api*`) |
+| `results/kode_ulang/` | The 145-run sample, the key, the blind LLM recoding with reasons, the codes after the author's adjudication, and both agreement reports |
+| `registration/` | Redacted copy of the preregistration (see below) |
 
 Comments, log text, and some identifiers are in Indonesian (*tugas* = task, *rujukan* = reference, *nilai* =
 score, *ulang* = repeat, *giliran* = turn, *jebakan* = trap, *menyerah* = gave up, *jalan-tapi-salah* = run but
@@ -52,8 +55,12 @@ Model files and their SHA-256 hashes are listed in the manuscript's supplementar
 
 ## Preregistration
 
-The study was preregistered on 7 November 2026, before any main run; every later change is dated in the
-manuscript (Section 2.9). ⬜ (public copy of the registration file.)
+The study was preregistered on 7 November 2026, before any main run (first commit of the registration file in
+the author's private research repository: 7a6bca8, 2026-11-07); every later change is dated in the file and in
+the manuscript (Section 2.9). `registration/Prareg_AgenEKG_disunting.md` is a public copy in Indonesian, as of
+21 November 2026, with one redaction: the name of the third-party gateway used for the commercial runs (two
+lines in the 7 November deviation). The unredacted file has md5 `6729d7056f26b2089d4b0997489d621d`; files it
+names (`Hasil_AgenEKG_*.md`) are internal result notes whose numbers appear in the manuscript.
 
 ## Licence
 

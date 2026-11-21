@@ -1,0 +1,1017 @@
+{
+ "R001": {
+  "model": "qwen3b",
+  "tugas": "qt_sel873",
+  "ulang": 3,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R002": {
+  "model": "qwen3b",
+  "tugas": "qt_sel34",
+  "ulang": 1,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R003": {
+  "model": "llama8b",
+  "tugas": "qt_sel114",
+  "ulang": 2,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R004": {
+  "model": "qwen7b",
+  "tugas": "hrv_f1o02",
+  "ulang": 2,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R005": {
+  "model": "llama8b",
+  "tugas": "qt_sele0609",
+  "ulang": 2,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R006": {
+  "model": "qwen7b",
+  "tugas": "jebak_laju_tr03",
+  "ulang": 1,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R007": {
+  "model": "llama8b",
+  "tugas": "qt_sele0112",
+  "ulang": 5,
+  "kode": "E5",
+  "subkode": null
+ },
+ "R008": {
+  "model": "qwen7b",
+  "tugas": "qt_sel308",
+  "ulang": 2,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R009": {
+  "model": "qwen3b",
+  "tugas": "qt_sel116",
+  "ulang": 1,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R010": {
+  "model": "llama8b",
+  "tugas": "jebak_laju_tr04",
+  "ulang": 2,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R011": {
+  "model": "qwen7b",
+  "tugas": "hrv_f1y03",
+  "ulang": 1,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R012": {
+  "model": "llama8b",
+  "tugas": "qt_sel34",
+  "ulang": 1,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R013": {
+  "model": "qwen3b",
+  "tugas": "qt_sel46",
+  "ulang": 1,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R014": {
+  "model": "llama8b",
+  "tugas": "hrv_f2o07",
+  "ulang": 3,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R015": {
+  "model": "qwen3b",
+  "tugas": "qt_sele0604",
+  "ulang": 3,
+  "kode": "E2",
+  "subkode": "menyerah"
+ },
+ "R016": {
+  "model": "llama8b",
+  "tugas": "qt_sel14157",
+  "ulang": 1,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R017": {
+  "model": "qwen3b",
+  "tugas": "hrv_f1y08",
+  "ulang": 3,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R018": {
+  "model": "qwen7b",
+  "tugas": "qt_sel50",
+  "ulang": 2,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R019": {
+  "model": "qwen3b",
+  "tugas": "jebak_ektopik_119",
+  "ulang": 4,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R020": {
+  "model": "llama8b",
+  "tugas": "hrv_f2o07",
+  "ulang": 4,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R021": {
+  "model": "qwen7b",
+  "tugas": "qt_sel16265",
+  "ulang": 1,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R022": {
+  "model": "qwen3b",
+  "tugas": "jebak_takada_sel301",
+  "ulang": 4,
+  "kode": "E4",
+  "subkode": "tak terjawab dijawab angka"
+ },
+ "R023": {
+  "model": "qwen3b",
+  "tugas": "qt_sel103",
+  "ulang": 2,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R024": {
+  "model": "qwen3b",
+  "tugas": "hrv_f2y01",
+  "ulang": 1,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R025": {
+  "model": "llama8b",
+  "tugas": "qt_sel871",
+  "ulang": 2,
+  "kode": "E5",
+  "subkode": null
+ },
+ "R026": {
+  "model": "llama8b",
+  "tugas": "hrv_f1y03",
+  "ulang": 3,
+  "kode": "E2",
+  "subkode": "besaran bukan angka"
+ },
+ "R027": {
+  "model": "qwen3b",
+  "tugas": "hrv_f1o09",
+  "ulang": 4,
+  "kode": "E2",
+  "subkode": "tanpa FINAL"
+ },
+ "R028": {
+  "model": "llama8b",
+  "tugas": "hrv_f2y10",
+  "ulang": 2,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R029": {
+  "model": "qwen7b",
+  "tugas": "jebak_ektopik_106",
+  "ulang": 2,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R030": {
+  "model": "qwen7b",
+  "tugas": "jebak_takada_f2y05",
+  "ulang": 1,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R031": {
+  "model": "llama8b",
+  "tugas": "qt_sel232",
+  "ulang": 4,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R032": {
+  "model": "llama8b",
+  "tugas": "qt_sel306",
+  "ulang": 3,
+  "kode": "E2",
+  "subkode": "FINAL rusak"
+ },
+ "R033": {
+  "model": "llama8b",
+  "tugas": "hrv_f1o09",
+  "ulang": 1,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R034": {
+  "model": "qwen7b",
+  "tugas": "jebak_laju_tr04",
+  "ulang": 5,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R035": {
+  "model": "qwen3b",
+  "tugas": "hrv_f1y08",
+  "ulang": 4,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R036": {
+  "model": "qwen7b",
+  "tugas": "qt_sel16420",
+  "ulang": 2,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R037": {
+  "model": "llama8b",
+  "tugas": "hrv_f1o02",
+  "ulang": 5,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R038": {
+  "model": "llama8b",
+  "tugas": "qt_sel40",
+  "ulang": 3,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R039": {
+  "model": "qwen3b",
+  "tugas": "qt_sel114",
+  "ulang": 5,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R040": {
+  "model": "llama8b",
+  "tugas": "hrv_f1y05",
+  "ulang": 1,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R041": {
+  "model": "qwen7b",
+  "tugas": "hrv_f1o01",
+  "ulang": 1,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R042": {
+  "model": "qwen7b",
+  "tugas": "jebak_kanal_tr06",
+  "ulang": 5,
+  "kode": "E2",
+  "subkode": "tanpa FINAL"
+ },
+ "R043": {
+  "model": "qwen3b",
+  "tugas": "qt_sele0607",
+  "ulang": 4,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R044": {
+  "model": "llama8b",
+  "tugas": "hrv_f2o04",
+  "ulang": 5,
+  "kode": "E2",
+  "subkode": "besaran bukan angka"
+ },
+ "R045": {
+  "model": "llama8b",
+  "tugas": "hrv_f2o10",
+  "ulang": 1,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R046": {
+  "model": "llama8b",
+  "tugas": "jebak_laju_tr04",
+  "ulang": 1,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R047": {
+  "model": "qwen3b",
+  "tugas": "hrv_f2y06",
+  "ulang": 4,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R048": {
+  "model": "qwen3b",
+  "tugas": "hrv_f2o05",
+  "ulang": 4,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R049": {
+  "model": "qwen7b",
+  "tugas": "qt_sele0604",
+  "ulang": 1,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R050": {
+  "model": "qwen3b",
+  "tugas": "qt_sel15814",
+  "ulang": 4,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R051": {
+  "model": "qwen7b",
+  "tugas": "qt_sel33",
+  "ulang": 4,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R052": {
+  "model": "qwen3b",
+  "tugas": "hrv_f1y02",
+  "ulang": 3,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R053": {
+  "model": "llama8b",
+  "tugas": "hrv_f2y02",
+  "ulang": 3,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R054": {
+  "model": "llama8b",
+  "tugas": "qt_sel16265",
+  "ulang": 4,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R055": {
+  "model": "qwen3b",
+  "tugas": "qt_sel871",
+  "ulang": 1,
+  "kode": "E2",
+  "subkode": "tanpa FINAL"
+ },
+ "R056": {
+  "model": "llama8b",
+  "tugas": "qt_sele0603",
+  "ulang": 2,
+  "kode": "E2",
+  "subkode": "tanpa FINAL"
+ },
+ "R057": {
+  "model": "qwen7b",
+  "tugas": "hrv_f1o10",
+  "ulang": 5,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R058": {
+  "model": "qwen3b",
+  "tugas": "qt_sel40",
+  "ulang": 3,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R059": {
+  "model": "llama8b",
+  "tugas": "hrv_f1o10",
+  "ulang": 2,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R060": {
+  "model": "qwen7b",
+  "tugas": "hrv_f2y05",
+  "ulang": 3,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R061": {
+  "model": "qwen7b",
+  "tugas": "qt_sel15814",
+  "ulang": 3,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R062": {
+  "model": "llama8b",
+  "tugas": "hrv_f2y04",
+  "ulang": 5,
+  "kode": "E2",
+  "subkode": "FINAL rusak"
+ },
+ "R063": {
+  "model": "qwen3b",
+  "tugas": "jebak_kanal_tr06",
+  "ulang": 2,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R064": {
+  "model": "qwen7b",
+  "tugas": "qt_sel38",
+  "ulang": 1,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R065": {
+  "model": "qwen7b",
+  "tugas": "qt_sel49",
+  "ulang": 3,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R066": {
+  "model": "qwen7b",
+  "tugas": "qt_sel34",
+  "ulang": 1,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R067": {
+  "model": "qwen7b",
+  "tugas": "jebak_ektopik_228",
+  "ulang": 3,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R068": {
+  "model": "qwen7b",
+  "tugas": "hrv_f2y10",
+  "ulang": 3,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R069": {
+  "model": "qwen3b",
+  "tugas": "hrv_f1o01",
+  "ulang": 3,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R070": {
+  "model": "qwen7b",
+  "tugas": "qt_sel891",
+  "ulang": 5,
+  "kode": "E2",
+  "subkode": "menyerah"
+ },
+ "R071": {
+  "model": "llama8b",
+  "tugas": "jebak_laju_tr05",
+  "ulang": 5,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R072": {
+  "model": "qwen3b",
+  "tugas": "hrv_f1o06",
+  "ulang": 2,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R073": {
+  "model": "qwen3b",
+  "tugas": "hrv_f2o10",
+  "ulang": 4,
+  "kode": "E2",
+  "subkode": "menyerah"
+ },
+ "R074": {
+  "model": "qwen7b",
+  "tugas": "qt_sele0603",
+  "ulang": 1,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R075": {
+  "model": "qwen3b",
+  "tugas": "qt_sel306",
+  "ulang": 4,
+  "kode": "E2",
+  "subkode": "tanpa FINAL"
+ },
+ "R076": {
+  "model": "qwen3b",
+  "tugas": "qt_sel853",
+  "ulang": 3,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R077": {
+  "model": "qwen3b",
+  "tugas": "qt_sel853",
+  "ulang": 2,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R078": {
+  "model": "qwen3b",
+  "tugas": "hrv_f2y03",
+  "ulang": 1,
+  "kode": "E2",
+  "subkode": "FINAL rusak"
+ },
+ "R079": {
+  "model": "qwen7b",
+  "tugas": "jebak_kanal_tr07",
+  "ulang": 2,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R080": {
+  "model": "qwen3b",
+  "tugas": "qt_sel840",
+  "ulang": 4,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R081": {
+  "model": "llama8b",
+  "tugas": "qt_sel116",
+  "ulang": 4,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R082": {
+  "model": "llama8b",
+  "tugas": "hrv_f1o01",
+  "ulang": 2,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R083": {
+  "model": "qwen7b",
+  "tugas": "jebak_laju_tr01",
+  "ulang": 2,
+  "kode": "E2",
+  "subkode": "menyerah"
+ },
+ "R084": {
+  "model": "llama8b",
+  "tugas": "hrv_f2o10",
+  "ulang": 2,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R085": {
+  "model": "qwen3b",
+  "tugas": "hrv_f1o08",
+  "ulang": 5,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R086": {
+  "model": "qwen3b",
+  "tugas": "qt_sele0607",
+  "ulang": 5,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R087": {
+  "model": "qwen7b",
+  "tugas": "hrv_f2o04",
+  "ulang": 4,
+  "kode": "E2",
+  "subkode": "tanpa FINAL"
+ },
+ "R088": {
+  "model": "qwen3b",
+  "tugas": "jebak_ektopik_209",
+  "ulang": 4,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R089": {
+  "model": "qwen3b",
+  "tugas": "jebak_kanal_tr07",
+  "ulang": 1,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R090": {
+  "model": "qwen7b",
+  "tugas": "qt_sel30",
+  "ulang": 5,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R091": {
+  "model": "qwen7b",
+  "tugas": "hrv_f1o02",
+  "ulang": 3,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R092": {
+  "model": "qwen7b",
+  "tugas": "qt_sel310",
+  "ulang": 1,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R093": {
+  "model": "llama8b",
+  "tugas": "jebak_ektopik_119",
+  "ulang": 5,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R094": {
+  "model": "qwen7b",
+  "tugas": "qt_sel103",
+  "ulang": 3,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R095": {
+  "model": "llama8b",
+  "tugas": "qt_sel840",
+  "ulang": 4,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R096": {
+  "model": "qwen3b",
+  "tugas": "hrv_f1o01",
+  "ulang": 5,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R097": {
+  "model": "llama8b",
+  "tugas": "qt_sel16265",
+  "ulang": 5,
+  "kode": "E5",
+  "subkode": null
+ },
+ "R098": {
+  "model": "qwen3b",
+  "tugas": "qt_sel306",
+  "ulang": 3,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R099": {
+  "model": "qwen7b",
+  "tugas": "hrv_f1o09",
+  "ulang": 3,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R100": {
+  "model": "llama8b",
+  "tugas": "jebak_laju_tr04",
+  "ulang": 4,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R101": {
+  "model": "qwen3b",
+  "tugas": "qt_sel808",
+  "ulang": 2,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R102": {
+  "model": "llama8b",
+  "tugas": "hrv_f1o03",
+  "ulang": 5,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R103": {
+  "model": "qwen7b",
+  "tugas": "qt_sel871",
+  "ulang": 5,
+  "kode": "E2",
+  "subkode": "menyerah"
+ },
+ "R104": {
+  "model": "qwen7b",
+  "tugas": "qt_sel33",
+  "ulang": 5,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R105": {
+  "model": "qwen7b",
+  "tugas": "qt_sel873",
+  "ulang": 4,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R106": {
+  "model": "qwen7b",
+  "tugas": "jebak_ektopik_215",
+  "ulang": 2,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R107": {
+  "model": "qwen3b",
+  "tugas": "hrv_f1o09",
+  "ulang": 5,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R108": {
+  "model": "qwen3b",
+  "tugas": "qt_sel116",
+  "ulang": 5,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R109": {
+  "model": "llama8b",
+  "tugas": "qt_sel34",
+  "ulang": 4,
+  "kode": "E5",
+  "subkode": null
+ },
+ "R110": {
+  "model": "qwen7b",
+  "tugas": "jebak_kanal_tr06",
+  "ulang": 1,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R111": {
+  "model": "llama8b",
+  "tugas": "hrv_f2y07",
+  "ulang": 4,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R112": {
+  "model": "qwen7b",
+  "tugas": "hrv_f2y01",
+  "ulang": 5,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R113": {
+  "model": "llama8b",
+  "tugas": "hrv_f2o06",
+  "ulang": 5,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R114": {
+  "model": "qwen7b",
+  "tugas": "jebak_kanal_tr09",
+  "ulang": 3,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R115": {
+  "model": "llama8b",
+  "tugas": "jebak_ektopik_209",
+  "ulang": 4,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R116": {
+  "model": "qwen3b",
+  "tugas": "hrv_f1o10",
+  "ulang": 5,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R117": {
+  "model": "llama8b",
+  "tugas": "qt_sel308",
+  "ulang": 3,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R118": {
+  "model": "qwen3b",
+  "tugas": "jebak_ektopik_228",
+  "ulang": 3,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R119": {
+  "model": "qwen3b",
+  "tugas": "qt_sel306",
+  "ulang": 5,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R120": {
+  "model": "llama8b",
+  "tugas": "jebak_kanal_tr09",
+  "ulang": 5,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R121": {
+  "model": "qwen7b",
+  "tugas": "qt_sele0604",
+  "ulang": 4,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R122": {
+  "model": "qwen3b",
+  "tugas": "qt_sel16265",
+  "ulang": 4,
+  "kode": "E2",
+  "subkode": "besaran bukan angka"
+ },
+ "R123": {
+  "model": "llama8b",
+  "tugas": "qt_sel50",
+  "ulang": 2,
+  "kode": "E2",
+  "subkode": "besaran bukan angka"
+ },
+ "R124": {
+  "model": "llama8b",
+  "tugas": "qt_sel34",
+  "ulang": 2,
+  "kode": "E5",
+  "subkode": null
+ },
+ "R125": {
+  "model": "qwen7b",
+  "tugas": "qt_sel808",
+  "ulang": 1,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R126": {
+  "model": "llama8b",
+  "tugas": "hrv_f1o08",
+  "ulang": 1,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R127": {
+  "model": "llama8b",
+  "tugas": "jebak_ektopik_228",
+  "ulang": 1,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R128": {
+  "model": "qwen3b",
+  "tugas": "qt_sel52",
+  "ulang": 5,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R129": {
+  "model": "qwen3b",
+  "tugas": "hrv_f1o05",
+  "ulang": 2,
+  "kode": "E2",
+  "subkode": "tanpa FINAL"
+ },
+ "R130": {
+  "model": "qwen7b",
+  "tugas": "qt_sel50",
+  "ulang": 4,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R131": {
+  "model": "llama8b",
+  "tugas": "qt_sel306",
+  "ulang": 5,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R132": {
+  "model": "qwen3b",
+  "tugas": "qt_sel307",
+  "ulang": 3,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R133": {
+  "model": "llama8b",
+  "tugas": "qt_sel16265",
+  "ulang": 3,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R134": {
+  "model": "qwen3b",
+  "tugas": "qt_sele0114",
+  "ulang": 4,
+  "kode": "E2",
+  "subkode": "tanpa FINAL"
+ },
+ "R135": {
+  "model": "qwen7b",
+  "tugas": "qt_sel853",
+  "ulang": 5,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R136": {
+  "model": "llama8b",
+  "tugas": "hrv_f2o03",
+  "ulang": 3,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R137": {
+  "model": "qwen7b",
+  "tugas": "hrv_f2o06",
+  "ulang": 5,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R138": {
+  "model": "qwen7b",
+  "tugas": "jebak_laju_tr03",
+  "ulang": 5,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R139": {
+  "model": "qwen3b",
+  "tugas": "hrv_f2y10",
+  "ulang": 5,
+  "kode": "E2",
+  "subkode": "menyerah"
+ },
+ "R140": {
+  "model": "llama8b",
+  "tugas": "hrv_f2o05",
+  "ulang": 5,
+  "kode": "E2",
+  "subkode": "FINAL rusak"
+ },
+ "R141": {
+  "model": "qwen7b",
+  "tugas": "hrv_f2o02",
+  "ulang": 5,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R142": {
+  "model": "qwen3b",
+  "tugas": "qt_sel873",
+  "ulang": 4,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R143": {
+  "model": "llama8b",
+  "tugas": "jebak_laju_tr04",
+  "ulang": 3,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R144": {
+  "model": "qwen7b",
+  "tugas": "hrv_f1o09",
+  "ulang": 2,
+  "kode": "E1",
+  "subkode": null
+ },
+ "R145": {
+  "model": "qwen7b",
+  "tugas": "qt_sel39",
+  "ulang": 3,
+  "kode": "E1",
+  "subkode": null
+ }
+}
