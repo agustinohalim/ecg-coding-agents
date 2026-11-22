@@ -1,9 +1,9 @@
-"""Ringkasan API untuk lengan eksploratif "dokumentasi API" AgenEKG (Prareg_AgenEKG.md, penyimpangan 21 Nov 2026).
+"""API summary for the AgenEKG exploratory API-documentation arm (preregistration, deviation of 21 November 2026).
 
-Dijalankan di dalam kontainer `agenekg-py:1` agar tanda tangan dan docstring berasal dari versi pustaka yang
-benar-benar terpasang (neurokit2 0.3.0, wfdb 4.3.1, scipy 1.16.3), bukan dari ingatan:
+Run inside the `agenekg-py:1` container so that signatures and docstrings come from the library versions actually
+installed (neurokit2 0.3.0, wfdb 4.3.1, scipy 1.16.3):
 
-    docker run --rm --network none -v "<folder>:/out" -v "<repo>/Riset/EKG:/src:ro" agenekg-py:1 \
+    docker run --rm --network none -v "<folder>:/out" -v "<repo>/analysis:/src:ro" agenekg-py:1 \
         python /src/agenekg_api_ringkas.py /out/agenekg_api_ringkas.txt
 """
 import importlib

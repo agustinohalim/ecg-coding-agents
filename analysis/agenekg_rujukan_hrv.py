@@ -1,24 +1,24 @@
-"""Nilai rujukan HRV dari anotasi denyut Fantasia 1.0.0 (ODC-By 1.0) — Prareg_AgenEKG.md bagian 2–3.
+"""HRV reference values from the Fantasia 1.0.0 beat annotations (ODC-By 1.0); preregistration, sections 2-3.
 
-Anotasi `.ecg` Fantasia = denyut hasil detektor otomatis yang dikoreksi; semua bersimbol `N`, jadi denyut
-ektopik tidak bisa dibuang dari simbol. Aturan jendela (USULAN, menunggu Penyimpangan):
-  jendela 5 menit tak bertumpang mulai sampel 0; jendela pertama yang (1) semua RR dalam 0,3–2,0 s dan
-  (2) tiap RR berbeda ≤ 20 % dari RR sebelumnya. Rekaman tanpa jendela seperti itu dikeluarkan.
-NN = selisih puncak beruntun yang keduanya di dalam jendela.
+Fantasia's `.ecg` annotations are corrected automatic detections, all with symbol `N`, so ectopic beats cannot
+be removed by symbol. Window rule (fixed by the deviation of 7 November 2026):
+  non-overlapping 5-minute windows from sample 0; the first window in which (1) every RR lies in 0.3-2.0 s and
+  (2) every RR differs by <= 20 % from the previous RR. Records without such a window are excluded.
+NN = differences between successive peaks that both lie inside the window.
 
-Besaran: HR rata-rata (60 / rerata NN), SDNN (ddof 1), RMSSD, pNN50 (%), dan LF (0,04–0,15 Hz), HF
-(0,15–0,40 Hz), LF/HF dengan dua implementasi:
-  (a) NeuroKit2 `hrv_frequency` dengan `normalize=False` (bawaannya `True` memberi daya ternormalisasi,
-      bukan ms²; LF/HF sama);
-  (b) sendiri: NN (ms) pada waktu denyut, interpolasi kubik 4 Hz, buang rerata, Welch Hann 256 titik
-      (64 s) tumpang 50 %, daya pita = integral trapesium (ms²).
-Tidak ada agen/LLM di skrip ini. Dijalankan di kontainer `agenekg-py:1` agar versi pustaka sama dengan
-kotak pasir agen:
+Quantities: mean HR (60 / mean NN), SDNN (ddof 1), RMSSD, pNN50 (%), and LF (0.04-0.15 Hz), HF (0.15-0.40 Hz),
+LF/HF from two implementations:
+  (a) NeuroKit2 `hrv_frequency` with `normalize=False` (the default `True` gives normalised power, not ms^2;
+      LF/HF is the same);
+  (b) own: NN (ms) at beat times, cubic interpolation at 4 Hz, mean removed, Welch with a 256-point (64 s)
+      Hann window and 50 % overlap, band power = trapezoidal integral (ms^2).
+No agent or language model is involved. Run inside the `agenekg-py:1` container so that library versions match
+the agent sandbox:
 
-    docker run --rm -v C:/Data/PhysioNet/fantasia/data:/data:ro -v %CD%/Riset/EKG:/kode -w /kode \
-        agenekg-py:1 python agenekg_rujukan_hrv.py /data/fantasia-database-1.0.0 > keluaran.md
+    docker run --rm -v <PhysioNet>/fantasia/data:/data:ro -v <repo>/analysis:/kode -w /kode \
+        agenekg-py:1 python agenekg_rujukan_hrv.py /data/fantasia-database-1.0.0 > output.md
 
-Keluaran: tabel Markdown ke stdout; JSON per rekaman ke `agenekg_rujukan_hrv.json` di folder skrip.
+Output: a Markdown table on stdout; JSON per record to `agenekg_rujukan_hrv.json` in the working folder.
 """
 import json
 import os
@@ -38,7 +38,7 @@ LF, HF = (0.04, 0.15), (0.15, 0.40)
 
 
 def pilih_jendela(r, fs, n):
-    """Indeks [awal, akhir) denyut dalam jendela 5 menit pertama yang lolos aturan, atau None."""
+    """(window index, beat indices) of the first 5-minute window that passes the rule, else (None, None)."""
     lebar = JENDELA_S * fs
     for k in range(int(n // lebar)):
         a, b = k * lebar, (k + 1) * lebar
@@ -77,7 +77,7 @@ def main():
             continue
         pk = r[idx]
         nn = np.diff(pk) / fs * 1000.0
-        a_lf = nk.hrv_frequency(pk - pk[0], sampling_rate=fs, normalize=False)  # ms²; bawaan normalize=True bukan ms²
+        a_lf = nk.hrv_frequency(pk - pk[0], sampling_rate=fs, normalize=False)  # the default normalize=True is not in ms²
         b_lf, b_hf, b_r = daya_sendiri(pk[1:] / fs, nn)
         hasil.append(dict(
             rekaman=rek, fs=fs, kanal_ekg=h.sig_name.index("ECG"), jendela=k,

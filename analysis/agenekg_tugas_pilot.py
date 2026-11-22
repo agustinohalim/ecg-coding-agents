@@ -1,9 +1,15 @@
-"""Bangkitkan 5 tugas pilot QT (Prareg_AgenEKG.md bagian 2): benih 20261107, rekaman dengan denyut
-beruntun dan tanpa .q2c. Menulis agenekg_tugas_pilot.json (teks tugas + rujukan terpisah)."""
-import glob, json, os, random, sys
-import numpy as np
+"""Generates the 5 pilot QT tasks (preregistration, section 2): seed 20261107, records with consecutive
+annotated beats and no .q2c file. Writes agenekg_tugas_pilot.json and agenekg_rujukan_pilot.json to the
+current folder."""
+import glob
+import json
+import os
+import random
+import sys
+
 sys.path.insert(0, os.path.dirname(__file__))
-import agenekg_rujukan_qt as R
+import agenekg_rujukan_qt as R  # noqa: E402
+
 
 def main():
     F = R.FOLDER
@@ -37,6 +43,7 @@ def main():
     json.dump(tugas, open("agenekg_tugas_pilot.json", "w", encoding="utf-8"), indent=1)
     json.dump(rujukan, open("agenekg_rujukan_pilot.json", "w", encoding="utf-8"), indent=1)
     print(len(calon), "calon;", [r for r, _, _ in pilih])
+
 
 if __name__ == "__main__":
     main()

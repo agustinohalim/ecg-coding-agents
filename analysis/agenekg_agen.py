@@ -1,16 +1,16 @@
-"""Kerangka agen pengode AgenEKG (lihat Prareg_AgenEKG.md bagian 6).
+"""AgenEKG coding-agent harness (preregistration, section 6).
 
-Satu kerangka untuk semua model: model menulis satu blok kode Python per giliran, kode dijalankan dalam
-kontainer Docker `agenekg-py:1` tanpa jaringan, keluaran dikembalikan, maksimal 10 giliran (sebelum giliran
-terakhir model diberi tahu bahwa itu giliran terakhir), model mengakhiri dengan `FINAL: {json}`. Kotak pasir hanya berisi berkas `.hea`/`.dat` rekaman tugas —
-berkas anotasi tidak pernah disalin.
+One harness for every model: the model writes one Python code block per turn, the code runs in the Docker
+container `agenekg-py:1` without network access, and its output is returned. At most 10 turns; before the
+last one the model is told it is the last. The model ends with `FINAL: {json}`. The sandbox holds only the
+task's `.hea`/`.dat` files; annotation files are never copied.
 
-Model dipanggil lewat API kompatibel OpenAI (LM Studio lokal: http://localhost:1234/v1).
-Semua transkrip disimpan sebagai JSON di folder keluaran (di luar repo).
+The model is called through an OpenAI-compatible API (local LM Studio: http://localhost:1234/v1). Every
+transcript is saved as JSON in the output folder.
 
-Pakai:
-    python -X utf8 Riset/EKG/agenekg_agen.py --tugas tugas.json --model <id> --ulang 1 \
-        --keluar C:/Data/AgenEKG_runs/<nama>
+Usage:
+    python -X utf8 analysis/agenekg_agen.py --tugas tugas.json --model <id> --ulang 1 \
+        --keluar <output folder>
 """
 import argparse
 import json
@@ -32,7 +32,7 @@ SISTEM = (
     "FINAL: followed by the JSON object requested in the task, and no code block. If the task cannot be "
     "answered from the files, reply FINAL: {\"unanswerable\": true, \"reason\": \"...\"}."
 )
-MAKS_GILIRAN = 10  # Penyimpangan 7 Nov 2026 (Prareg_AgenEKG.md): dari 6
+MAKS_GILIRAN = 10  # raised from 6 by the dated deviation of 7 November 2026
 AKHIR = "This is your last turn: reply now with FINAL: {json}."
 BATAS_DETIK = 120
 POTONG = 4000
@@ -40,7 +40,7 @@ GAMBAR = "agenekg-py:1"
 
 
 def kunci_api(nama):
-    """Kunci API dari peubah lingkungan `nama`, atau dari ~/.secrets/<nama> (di luar repo). Tidak dicetak."""
+    """API key from environment variable `nama`, else from ~/.secrets/<nama>. Never printed."""
     import os
     if not nama:
         return None
@@ -49,7 +49,7 @@ def kunci_api(nama):
     f = Path.home() / ".secrets" / nama
     if f.exists():
         isi = f.read_text(encoding="utf-8-sig").strip()
-        m = re.search(r'"apiKey"\s*:\s*"([^"]+)"', isi)  # berkas konfigurasi gateway (JSON)
+        m = re.search(r'"apiKey"\s*:\s*"([^"]+)"', isi)  # gateway configuration file (JSON)
         return m.group(1) if m else isi
     raise SystemExit(f"Kunci {nama} tidak ditemukan (peubah lingkungan atau ~/.secrets/{nama}).")
 
@@ -59,10 +59,7 @@ LUAR_PUNCAK = False
 
 
 def tunggu_luar_puncak():
-    """Tarif puncak DeepSeek: Senin–Jumat 01–04 dan 06–10 UTC (harga dua kali). Tunggu sampai jam luar puncak.
-
-    Dicek sebelum tiap panggilan; tugas yang sedang berjalan hanya tertunda, tidak diulang.
-    """
+    """Waits out DeepSeek's peak-price hours (Mon-Fri 01-04 and 06-10 UTC); a running task is delayed, not repeated."""
     import datetime as dt
     while LUAR_PUNCAK:
         t = dt.datetime.now(dt.timezone.utc)
@@ -77,8 +74,7 @@ def panggil(url, model, pesan, suhu):
     if suhu is not None:
         badan["temperature"] = suhu
     kepala = {"Authorization": f"Bearer {KUNCI}"} if KUNCI else {}
-    # Galat jaringan/server penyedia bukan galat agen: ulangi dengan jeda makin panjang (total ±30 menit),
-    # lalu hentikan run. Gangguan gateway 7 Nov 2026 lebih lama dari 3 × 30 s.
+    # Provider failures are not agent failures: back off for about 30 minutes in all, then stop the run.
     jeda = [30, 60, 120, 300, 600, 900]
     for coba in range(len(jeda) + 1):
         try:
@@ -110,7 +106,7 @@ def jalankan(kode, kotak):
     except subprocess.TimeoutExpired:
         keluar, kode_keluar = f"[timeout after {BATAS_DETIK} s]", -9
     if "docker API" in keluar or "Unable to find image" in keluar:
-        # Galat kotak pasir, bukan galat agen: hentikan run agar tidak tercatat sebagai jawaban agen.
+        # A sandbox failure must stop the run rather than be recorded as the agent's answer.
         raise RuntimeError("Kotak pasir Docker gagal: " + keluar[-300:])
     return keluar, kode_keluar, round(time.time() - t0, 1)
 
@@ -118,11 +114,11 @@ def jalankan(kode, kotak):
 def satu_tugas(tugas, args, ulang):
     kotak = Path(args.keluar) / f"{tugas['id']}_u{ulang}"
     if kotak.exists():
-        # sisa tugas yang terputus; salinan .dat bisa read-only di Windows
+        # Copied .dat files can be read-only on Windows.
         shutil.rmtree(kotak, onexc=lambda f, p, e: (os.chmod(p, stat.S_IWRITE), f(p)))
     kotak.mkdir(parents=True)
     for b in tugas["berkas"]:
-        shutil.copyfile(Path(args.data) / b, kotak / Path(b).name)  # tanpa atribut read-only
+        shutil.copyfile(Path(args.data) / b, kotak / Path(b).name)  # copyfile drops the read-only attribute
     pesan = [{"role": "system", "content": SISTEM}, {"role": "user", "content": tugas["teks"]}]
     log = {"tugas": tugas["id"], "model": args.model, "ulang": ulang, "giliran": [], "final": None}
     for g in range(MAKS_GILIRAN):
@@ -146,7 +142,7 @@ def satu_tugas(tugas, args, ulang):
             umpan += "\n\n" + AKHIR
         pesan.append({"role": "user", "content": umpan})
     (kotak / "_agen.py").unlink(missing_ok=True)
-    for b in tugas["berkas"]:  # salinan data tidak perlu disimpan; hemat disk
+    for b in tugas["berkas"]:
         (kotak / Path(b).name).unlink(missing_ok=True)
     (Path(args.keluar) / f"{tugas['id']}_u{ulang}.json").write_text(
         json.dumps(log, ensure_ascii=False, indent=1), encoding="utf-8")
@@ -162,10 +158,10 @@ def main():
     ap.add_argument("--keluar", required=True)
     ap.add_argument("--ulang", type=int, default=1)
     ap.add_argument("--ulang-ke", default=None,
-                    help="jalankan hanya ulangan ini, mis. 2 atau 1,3,5 (untuk beberapa proses sejajar)")
+                    help="run only these repeats, e.g. 2 or 1,3,5 (for parallel processes)")
     ap.add_argument("--suhu", type=float, default=None)
-    ap.add_argument("--kunci", default=None, help="nama peubah/berkas kunci API, mis. DEEPSEEK_API_KEY")
-    ap.add_argument("--luar-puncak", action="store_true", help="tunda panggilan API selama jam tarif puncak DeepSeek")
+    ap.add_argument("--kunci", default=None, help="name of the API-key variable or file, e.g. DEEPSEEK_API_KEY")
+    ap.add_argument("--luar-puncak", action="store_true", help="delay API calls during DeepSeek peak-price hours")
     args = ap.parse_args()
     global KUNCI, LUAR_PUNCAK
     KUNCI = kunci_api(args.kunci)
@@ -178,7 +174,7 @@ def main():
     for t in daftar:
         for u in ulangan:
             if (Path(args.keluar) / f"{t['id']}_u{u}.json").exists():
-                continue  # sudah selesai pada run sebelumnya (lanjut sesudah terputus)
+                continue  # finished by an earlier, interrupted run
             log = satu_tugas(t, args, u)
             print(t["id"], u, "FINAL" if log["final"] else "tanpa FINAL", len(log["giliran"]), "giliran", flush=True)
 

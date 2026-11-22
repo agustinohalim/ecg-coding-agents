@@ -1,11 +1,11 @@
-"""Kesepakatan kode ulang pengguna dengan kode otomatis taksonomi AgenEKG.
+"""Agreement between the recoder's codes and the automatic AgenEKG taxonomy codes.
 
-Membaca `lembar.md` yang sudah diisi dan `kunci.json` dari `agenekg_kode_ulang_bahan.py`, lalu mencetak
-persentase kesepakatan, kappa Cohen, dan matriks kebingungan untuk semua baris dan untuk baris di luar E1
-otomatis (E1 diperiksa mekanis dari kode keluar), serta daftar ketidaksepakatan.
+Reads the filled-in `lembar.md` and `kunci.json` from `agenekg_kode_ulang_bahan.py`, then prints percent
+agreement, Cohen's kappa, and the confusion matrix for all rows and for rows not coded E1 automatically (E1 is
+checked mechanically from exit codes), followed by the list of disagreements.
 
-Pakai:
-    python -X utf8 Riset/EKG/agenekg_kode_ulang_nilai.py --keluar C:/Data/AgenEKG_runs/kode_ulang
+Usage:
+    python -X utf8 analysis/agenekg_kode_ulang_nilai.py --keluar <recoding folder>
 """
 import argparse
 import json

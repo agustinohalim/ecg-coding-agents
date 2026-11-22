@@ -28,21 +28,33 @@ archived separately ⬜ (Zenodo DOI).
 | `analysis/agenekg_agen.py` | Agent harness: one Python block per turn, run in the container, ten turns, `FINAL: {json}` |
 | `analysis/agenekg_agen_api.py`, `agenekg_api_ringkas.py`, `agenekg_api_ringkas.txt` | API-documentation arm: the same harness with the library reference appended to the system prompt; the generator runs inside the container |
 | `analysis/agenekg_dasar_nk.py` | Library-only NeuroKit2 baseline (DWT, peak, CWT delineation) |
-| `analysis/agenekg_nilai.py`, `agenekg_analisis.py` | Scoring against the references, error taxonomy E1–E8, bootstrap CIs clustered by record, paired sign-flip permutation tests |
+| `analysis/agenekg_analisis.py`, `analysis/penilaian/` | Scoring against the references (`skor`), error taxonomy E1–E8 (`taksonomi`), bootstrap CIs clustered by record and paired sign-flip permutation tests (`statistik`), and the printed report (`laporan`) |
+| `analysis/agenekg_nilai.py` | Per-quantity scoring table for one run folder (used for the pilot) |
 | `analysis/agenekg_kode_ulang_bahan.py`, `agenekg_kode_ulang_nilai.py` | Blinded recoding material for the 10 % sample, and agreement (Cohen's kappa) with the automatic codes |
 | `results/` | Outputs of `agenekg_analisis.py`: main runs of the local models (`analisis_utama`), the four models together (`analisis_flash`), DeepSeek-V4-flash against the three baseline methods (`analisis_flash_vs_nk`), baseline (`analisis_dasar_nk`), API-documentation arm per model (`analisis_api*`) |
 | `results/kode_ulang/` | The 145-run sample, the key, the blind LLM recoding with reasons, the codes after the author's adjudication, and both agreement reports |
 | `registration/` | Redacted copy of the preregistration (see below) |
 
-Comments, log text, and some identifiers are in Indonesian (*tugas* = task, *rujukan* = reference, *nilai* =
+Identifiers, printed output, and log fields are in Indonesian (*tugas* = task, *rujukan* = reference, *nilai* =
 score, *ulang* = repeat, *giliran* = turn, *jebakan* = trap, *menyerah* = gave up, *jalan-tapi-salah* = run but
-wrong).
+wrong); docstrings and comments are in English.
+
+**Scripts as run, and the tidied versions here.** The scripts were tidied for release on 22 November 2026, after
+all analyses: comments and docstrings translated to English, and `agenekg_analisis.py` split into the
+`penilaian/` package, with no change in what they compute. The versions that produced every result are in
+commit `48c2fee` of this repository (the preregistration records their md5, e.g. `agenekg_agen.py`
+`0a751ebb…`, `agenekg_analisis.py` `67dad0a3…`). The tidied scripts were checked against them: the scoring,
+recoding, task, pilot, and QT-reference scripts reproduce the earlier outputs byte for byte (including every
+file in `results/` and the frozen reference file; the frozen task file differs only in line endings), and the harness, baseline, API-summary, and
+HRV-reference scripts differ only in docstrings, comments, and help text (identical syntax trees). The
+in-container baseline script (`DALAM` in `agenekg_dasar_nk.py`) is unchanged.
 
 ## Reproducing
 
 1. Download the three PhysioNet databases under one folder (default `C:/Data/PhysioNet`; every script takes
    `--data` or a folder argument).
-2. Build the container: `docker build -t agenekg-py:1 docker`.
+2. Build the container: `docker build -t agenekg-py:1 docker`. Run the scripts from the repository root;
+   `agenekg_analisis.py` finds `penilaian/` next to it.
 3. References and tasks (already frozen in `analysis/`; regenerating them should give identical files):
    `python -X utf8 analysis/agenekg_rujukan_qt.py <qtdb folder>`, then `agenekg_rujukan_hrv.py` inside the
    container (see its docstring), then `python -I -X utf8 analysis/agenekg_tugas.py`.

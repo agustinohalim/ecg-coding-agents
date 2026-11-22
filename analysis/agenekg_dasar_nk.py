@@ -1,18 +1,20 @@
-"""Pembanding NeuroKit2 tanpa agen untuk AgenEKG (eksploratif; Prareg_AgenEKG.md, penyimpangan 19 Nov 2026).
+"""Library-only NeuroKit2 baseline for AgenEKG (exploratory; preregistration, deviation of 19 November 2026).
 
-Pipa tetap tanpa LLM dijalankan di kontainer `agenekg-py:1` yang sama dengan agen (neurokit2 0.3.0, tanpa
-jaringan) pada semua tugas yang bisa dijawab. Keluarannya ditulis dalam bentuk log agen (`<tugas>_u1.json`,
-satu "giliran" berkode keluar 0, FINAL = jawaban JSON), sehingga dinilai `agenekg_analisis.py` dengan rujukan dan
-toleransi yang sama.
+A fixed pipeline with no language model runs in the same `agenekg-py:1` container as the agents (neurokit2
+0.3.0, no network) on every answerable task. Its output is written in the agent log format (`<task>_u1.json`,
+one turn with exit code 0, FINAL = the JSON answer), so `agenekg_analisis.py` scores it with the same references
+and tolerances.
 
-  QT     per kanal: ecg_clean + ecg_peaks + ecg_delineate(method); denyut = puncak R kanal pertama di jendela;
-         QT = awal QRS paling awal sampai akhir T paling akhir di kedua kanal (puncak R antarkanal dipasangkan
-         bila berjarak <= 50 ms); RR dari puncak R kanal pertama sebelumnya; QTc dilewati untuk denyut pertama.
-  HRV    kanal bernama di teks tugas; ecg_clean + ecg_peaks bawaan; NN = selang antar-puncak di jendela, tanpa
-         koreksi ektopik; SDNN (ddof 1), RMSSD, pNN50; LF/HF dari hrv_frequency(normalize=False).
+  QT     per channel: ecg_clean + ecg_peaks + ecg_delineate(method); beats = first-channel R peaks in the
+         window; QT = earliest QRS onset to latest T end over both channels (R peaks paired across channels
+         when <= 50 ms apart); RR from the previous first-channel R peak; QTc skipped for the first beat.
+  HRV    channel named in the task text; default ecg_clean + ecg_peaks; NN = peak-to-peak intervals in the
+         window, no ectopic correction; SDNN (ddof 1), RMSSD, pNN50; LF/HF from hrv_frequency(normalize=False).
 
-Pakai:
-    python -X utf8 Riset/EKG/agenekg_dasar_nk.py --metode dwt --keluar C:/Data/AgenEKG_runs/dasar_nk_dwt
+The in-container script `DALAM` is kept exactly as it ran.
+
+Usage:
+    python -X utf8 analysis/agenekg_dasar_nk.py --metode dwt --keluar <output folder>
 """
 import argparse
 import json
@@ -124,8 +126,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--metode", default="dwt", choices=["dwt", "peak", "cwt"])
     ap.add_argument("--keluar", required=True)
-    ap.add_argument("--bagian", default="0/1", help="i/n: kerjakan tugas ke-k dengan k mod n = i (pipa deterministik, "
-                    "jadi pembagian tidak mengubah hasil); tugas yang keluarannya sudah ada dilewati")
+    ap.add_argument("--bagian", default="0/1", help="i/n: run task k when k mod n = i (the pipeline is deterministic, "
+                    "so the split does not change results); tasks with existing output are skipped")
     ap.add_argument("--data", default="C:/Data/PhysioNet")
     ap.add_argument("--tugas", default=str(DIR / "agenekg_tugas.json"))
     ap.add_argument("--rujukan", default=str(DIR / "agenekg_rujukan.json"))

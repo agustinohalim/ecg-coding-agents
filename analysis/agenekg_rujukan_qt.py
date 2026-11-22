@@ -1,14 +1,14 @@
-"""Nilai rujukan QT/QTc dari anotasi manual QT Database (qtdb 1.0.0, ODC-By 1.0).
+"""QT/QTc reference values from the manual annotations of the QT Database (qtdb 1.0.0, ODC-By 1.0).
 
-Untuk tiap rekaman: denyut beranotasi di `.q1c` (annotator 1, lintasan kedua) -> QT per denyut =
-akhir T - awal QRS. RR = jarak ke puncak denyut beranotasi sebelumnya bila < 2 s (denyut beruntun).
-QTc Bazett = QT / sqrt(RR), Fridericia = QT / RR^(1/3), RR dalam detik.
+For each record: the beats annotated in `.q1c` (annotator 1, second pass) give QT per beat = end of T minus
+QRS onset. RR = distance to the previous annotated beat's peak when < 2 s (consecutive beats).
+Bazett QTc = QT / sqrt(RR), Fridericia = QT / RR^(1/3), RR in seconds.
 
-Juga sebaran antar-annotator (`.q1c` vs `.q2c`, 11 rekaman): beda QT rata-rata per rekaman, dipakai
-sebagai batas bawah toleransi di pra-daftar. Tidak ada agen/LLM di skrip ini.
+Also the inter-annotator spread (`.q1c` vs `.q2c`, 11 records): the difference in mean QT per record, used
+as the lower bound of the tolerance in the preregistration. No agent or language model is involved.
 
-Pakai:
-    python -X utf8 Riset/EKG/agenekg_rujukan_qt.py [folder_qtdb] > keluaran.md
+Usage:
+    python -X utf8 analysis/agenekg_rujukan_qt.py [qtdb folder] > output.md
 """
 import glob
 import os
@@ -22,7 +22,7 @@ DENYUT = set("NVSAFLRjJaEe/Q")
 
 
 def denyut_qt(rek, ekst):
-    """Daftar (puncak, awal_qrs, akhir_t) per denyut yang punya ketiganya."""
+    """(peak, qrs_onset, t_end) for every beat annotated with all three."""
     a = wfdb.rdann(os.path.join(FOLDER, rek), ekst)
     s, x = a.symbol, a.sample
     hasil = []

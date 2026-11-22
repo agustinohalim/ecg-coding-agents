@@ -1,17 +1,16 @@
-"""Bahan kode ulang taksonomi AgenEKG secara tersamar.
+"""Blinded material for recoding the AgenEKG taxonomy.
 
-Sampel 145 tugas-ulangan ditarik oleh `agenekg_analisis.py --sampel-kode-ulang` (benih 20261108) dan tidak
-ditarik ulang di sini. Skrip ini menulis tiga berkas ke folder keluaran:
+The 145-run sample is drawn by `agenekg_analisis.py --sampel-kode-ulang` (seed 20261108) and is not redrawn
+here. The script writes three files to the output folder:
 
-  lembar.md   ID acak R001-R145, kolom Kode pengguna dan Catatan; tanpa model dan tanpa kode otomatis
-  bahan.md    per ID: teks tugas, rujukan dan toleransi, FINAL, kode keluar tiap giliran, kode yang dijalankan
-  kunci.json  ID -> model, tugas-ulangan, kode otomatis (jangan dibuka sebelum lembar selesai)
+  lembar.md   random IDs R001-R145 with columns for the code and a note; no model and no automatic code
+  bahan.md    per ID: task text, references and tolerances, FINAL, exit code of each turn, executed code
+  kunci.json  ID -> model, task run, automatic code (not to be opened before the sheet is complete)
 
-Kesepakatan dihitung sesudahnya oleh `agenekg_kode_ulang_nilai.py`.
+Agreement is computed afterwards by `agenekg_kode_ulang_nilai.py`. The Markdown text stays in Indonesian.
 
-Pakai:
-    python -X utf8 Riset/EKG/agenekg_kode_ulang_bahan.py --sampel C:/Data/AgenEKG_runs/sampel_kode_ulang.md \
-        --keluar C:/Data/AgenEKG_runs/kode_ulang
+Usage:
+    python -X utf8 analysis/agenekg_kode_ulang_bahan.py --sampel <sampel_kode_ulang.md> --keluar <folder>
 """
 import argparse
 import json
@@ -20,6 +19,7 @@ import re
 from pathlib import Path
 
 import agenekg_analisis as an
+from penilaian import laju_asli, muat, muat_rujukan
 
 FOLDER_RUN = {
     "qwen7b": "utama_qwen25coder7b",
@@ -50,7 +50,7 @@ Setiap ID di bawah ini tidak seluruhnya benar. Kolom "Dalam toleransi" dihitung 
 
 
 def baca_sampel(path):
-    """Format tabel mengikuti yang ditulis agenekg_analisis.py."""
+    """Reads the table written by agenekg_analisis.py --sampel-kode-ulang."""
     baris = []
     for teks in Path(path).read_text(encoding="utf-8").splitlines():
         sel = [s.strip() for s in teks.strip().strip("|").split("|")]
@@ -60,23 +60,10 @@ def baca_sampel(path):
     return baris
 
 
-def muat_rujukan():
-    ruj = {r["id"]: r for r in json.loads((an.DIR / "agenekg_rujukan.json").read_text(encoding="utf-8"))}
-    tugas = {t["id"]: t for t in json.loads((an.DIR / "agenekg_tugas.json").read_text(encoding="utf-8"))}
-    d_frek = {}
-    for h in json.loads((an.DIR / "agenekg_rujukan_hrv.json").read_text(encoding="utf-8")):
-        d = {}
-        for k, ka, kb in (("lf_ms2", "lf_a", "lf_b"), ("hf_ms2", "hf_a", "hf_b"), ("lf_hf", "lfhf_a", "lfhf_b")):
-            if h.get(kb):
-                d[k] = abs(h[ka] - h[kb]) / abs(h[kb])
-        d_frek["hrv_" + h["rekaman"]] = d
-    return ruj, tugas, d_frek
-
-
-def muat_model(dir_run, sampel, ruj, tugas, d_frek):
+def muat_model(dir_run, sampel, rujukan):
     hasil = {}
     for model in sorted({m for m, _, _ in sampel}):
-        for b in an.muat(Path(dir_run) / FOLDER_RUN[model], ruj, tugas, d_frek):
+        for b in muat(Path(dir_run) / FOLDER_RUN[model], rujukan):
             hasil[(model, b["tugas"], b["ulang"])] = b
     return hasil
 
@@ -122,11 +109,12 @@ def kode_per_giliran(log):
     return "\n".join(bagian)
 
 
-def bagian_bahan(id_acak, log, r, t, baris):
+def bagian_bahan(id_acak, log, baris, rujukan):
+    r, t = rujukan.ruj[baris["tugas"]], rujukan.tugas[baris["tugas"]]
     final = (log.get("final") or "").replace("`", "'")
     return "\n".join([
         f"## {id_acak}\n",
-        f"Jenis: {r['jenis']} · laju rekaman {an.laju_asli(r)} Hz\n",
+        f"Jenis: {r['jenis']} · laju rekaman {laju_asli(r)} Hz\n",
         "> " + t["teks"].replace("\n", "\n> ") + "\n",
         tabel_besaran(baris, r),
         f"FINAL: `{final}`\n" if final else "FINAL: tidak ada\n",
@@ -137,8 +125,8 @@ def bagian_bahan(id_acak, log, r, t, baris):
 
 def tulis(a):
     sampel = baca_sampel(a.sampel)
-    ruj, tugas, d_frek = muat_rujukan()
-    baris_model = muat_model(a.runs, sampel, ruj, tugas, d_frek)
+    rujukan = muat_rujukan(an.RUJUKAN, an.TUGAS, an.RUJUKAN_HRV)
+    baris_model = muat_model(a.runs, sampel, rujukan)
     urut = sampel[:]
     random.Random(BENIH_URUT).shuffle(urut)
     keluar = Path(a.keluar)
@@ -149,7 +137,7 @@ def tulis(a):
         b = baris_model[(model, id_tugas, ulang)]
         log = json.loads((Path(a.runs) / FOLDER_RUN[model] / f"{id_tugas}_u{ulang}.json").read_text(encoding="utf-8"))
         kunci[id_acak] = dict(model=model, tugas=id_tugas, ulang=ulang, kode=b["kode"], subkode=b["subkode"])
-        bahan.append(bagian_bahan(id_acak, log, ruj[id_tugas], tugas[id_tugas], b))
+        bahan.append(bagian_bahan(id_acak, log, b, rujukan))
         lembar.append(f"| {id_acak} |  |  |")
     (keluar / "kunci.json").write_text(json.dumps(kunci, ensure_ascii=False, indent=1), encoding="utf-8")
     (keluar / "bahan.md").write_text("\n".join(bahan), encoding="utf-8")

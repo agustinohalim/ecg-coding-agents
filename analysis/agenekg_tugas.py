@@ -1,20 +1,20 @@
-"""Bangkitkan daftar tugas lengkap AgenEKG (Prareg_AgenEKG.md bagian 2, 5; Penyimpangan ketiga, USULAN).
+"""Generates the full AgenEKG task list (preregistration, sections 2 and 5; deviation of 7 November 2026).
 
-Keluaran (folder skrip): `agenekg_tugas.json` (teks + berkas, untuk agen) dan `agenekg_rujukan.json` (nilai +
-toleransi, tidak pernah masuk kotak pasir). Rekaman turunan (diresampel / kanal ditukar) ditulis ke
-`<data>/agenekg_turunan/` dengan nama netral `trNN` agar nama berkas tidak membocorkan jebakannya.
+Output (script folder): `agenekg_tugas.json` (text + files, for the agent) and `agenekg_rujukan.json` (values +
+tolerances, never copied into the sandbox). Derived records (resampled or with channels swapped) are written to
+`<data>/agenekg_turunan/` under neutral names `trNN` so that file names do not reveal the trap.
 
-Jenis tugas (benih 20261107 untuk semua pengacakan):
-- QT (45): QT Database, di luar 5 rekaman pilot. Per rekaman: rangkaian terpanjang denyut `.q1c` beruntun
-  (antar-denyut tidak ada denyut lain menurut `.atr`, atau `.pu0` bila tak ada `.atr`; RR < 2 s), panjang
-  ≥ 10 denyut. Definisi QT banyak sadapan: awal QRS paling awal sampai akhir T paling akhir di kedua kanal.
-- HRV (34): Fantasia, satu tugas per rekaman yang punya jendela lolos (`agenekg_rujukan_hrv.json`).
-- Jebakan (20): ektopik MIT-BIH (NN vs RR, 6; jendela 5 menit pertama per rekaman dengan ritme dasar sinus
-  `(N`, bigemini `(B` atau trigemini `(T`, tanpa tanda artefak `| ! x [ ]`, denyut hanya N/V/A/F, 10–80
-  ektopik, SDNN semua RR ≥ 1,3 × SDNN NN), laju sampel lain (5), urutan kanal ditukar (4), tak terjawab
-  (5: sadapan tidak ada 3, jendela di luar rekaman 2).
+Task types (seed 20261107 for every random draw):
+- QT (45): QT Database, excluding the 5 pilot records. Per record: the longest run of consecutive `.q1c` beats
+  (no other beat in between according to `.atr`, or `.pu0` when there is no `.atr`; RR < 2 s), at least
+  10 beats long. Multi-lead QT: earliest QRS onset to latest T end over both channels.
+- HRV (34): Fantasia, one task per record with a window that passes the rule (`agenekg_rujukan_hrv.json`).
+- Traps (20): MIT-BIH ectopic (NN vs RR, 6; the first 5-minute window per record with underlying sinus
+  rhythm `(N`, bigeminy `(B` or trigeminy `(T`, no artefact marks `| ! x [ ]`, beats only N/V/A/F, 10-80
+  ectopic beats, SDNN of all RR >= 1.3 x SDNN of NN), other sampling rate (5), channel order swapped (4),
+  unanswerable (5: missing lead 3, window beyond the record 2).
 
-Pakai (dari akar repo): python -I -X utf8 Riset/EKG/agenekg_tugas.py
+Usage (from the repository root): python -I -X utf8 analysis/agenekg_tugas.py
 """
 import json
 import os
@@ -133,7 +133,7 @@ def tugas_hrv(H):
 
 
 def turunan(d, nama, fs_baru=None, tukar=False):
-    """Potong rekaman Fantasia ke jendela ±60 s, opsional resampel / pindahkan kanal ECG ke indeks 0."""
+    """Cuts a Fantasia record to its window ±60 s; optionally resamples it or moves the ECG channel to index 0."""
     r, fs = d["rekaman"], d["fs"]
     a0 = max(0, d["sampel_awal"] - 60 * fs)
     rec = wfdb.rdrecord(os.path.join(DATA, FAN_REL, r), sampfrom=a0, sampto=d["sampel_akhir"] + 1 + 60 * fs)
@@ -214,10 +214,22 @@ def main():
     t, j, n_mit = tugas_ektopik(rng)
     T += t
     J += j
+    t, j = tugas_turunan(rng, H)
+    T += t
+    J += j
+    t, j = tugas_takterjawab(rng, H, {x["id"][3:] for x in J if x["jenis"] == "qt"})
+    T += t
+    J += j
+    periksa_berkas(T)
+    json.dump(T, open(os.path.join(SINI, "agenekg_tugas.json"), "w", encoding="utf-8"), indent=1, ensure_ascii=False)
+    json.dump(J, open(os.path.join(SINI, "agenekg_rujukan.json"), "w", encoding="utf-8"), indent=1, ensure_ascii=False)
+    cetak_ringkasan(J, n_qt, n_mit)
 
-    # Laju sampel lain (5) dan kanal ditukar (4): rekaman Fantasia berbeda, nama netral tr01..tr09.
-    pilih = rng.sample(H, 9)
-    for n, d in enumerate(pilih, 1):
+
+def tugas_turunan(rng, H):
+    """Other sampling rate (5) and swapped channels (4), each from a different Fantasia record, named tr01..tr09."""
+    T, J = [], []
+    for n, d in enumerate(rng.sample(H, 9), 1):
         nama = f"tr{n:02d}"
         if n <= 5:
             fs_baru = 500 if n <= 3 else 360
@@ -230,15 +242,18 @@ def main():
         J.append({"id": i, "jenis": jenis, "asal": d["rekaman"], "fs": fs_t, "nilai": {
             "hr_bpm": round(d["hr_bpm"], 3), "sdnn_ms": round(d["sdnn_ms"], 3), "rmssd_ms": round(d["rmssd_ms"], 3)},
             "tol": TOL_WAKTU, "denyut": d["n_denyut"]})
+    return T, J
 
-    # Tak terjawab (5): sadapan V5 yang tidak ada di Fantasia (3); jendela di luar panjang rekaman QTDB (2).
+
+def tugas_takterjawab(rng, H, qt_dipakai):
+    """Lead V5, absent from Fantasia (3), and a window beyond the end of an unused QTDB record (2)."""
+    T, J = [], []
     for d in rng.sample(H, 3):
         r = d["rekaman"]
         i = f"jebak_takada_{r}"
         T.append({"id": i, "berkas": berkas(FAN_REL, r),
                   "teks": TEKS_WAKTU.format(r=r, kanal="V5", a=d["sampel_awal"], b=d["sampel_akhir"])})
         J.append({"id": i, "jenis": "jebakan_takterjawab", "nilai": {"unanswerable": True}, "tol": {}})
-    qt_dipakai = {x["id"][3:] for x in J if x["jenis"] == "qt"}
     sisa = sorted(os.path.basename(p)[:-4] for p in os.listdir(os.path.join(DATA, QT_REL))
                   if p.endswith(".q1c") and os.path.basename(p)[:-4] not in PILOT | qt_dipakai)
     for r in rng.sample(sisa, 2):
@@ -246,14 +261,17 @@ def main():
         i = f"jebak_takada_{r}"
         T.append({"id": i, "berkas": berkas(QT_REL, r), "teks": TEKS_QT.format(r=r, a=n + 5000, b=n + 15000)})
         J.append({"id": i, "jenis": "jebakan_takterjawab", "nilai": {"unanswerable": True}, "tol": {}})
+    return T, J
 
+
+def periksa_berkas(T):
     assert len({t["id"] for t in T}) == len(T)
     for t in T:
         for f in t["berkas"]:
             assert os.path.exists(os.path.join(DATA, f)), f
-    json.dump(T, open(os.path.join(SINI, "agenekg_tugas.json"), "w", encoding="utf-8"), indent=1, ensure_ascii=False)
-    json.dump(J, open(os.path.join(SINI, "agenekg_rujukan.json"), "w", encoding="utf-8"), indent=1, ensure_ascii=False)
 
+
+def cetak_ringkasan(J, n_qt, n_mit):
     print(f"Calon QT (rangkaian bersih ≥ 10 denyut, di luar pilot): {n_qt}; calon jendela ektopik MIT-BIH: {n_mit}.\n")
     print("| Jenis | Tugas |\n|---|---|")
     for k, v in sorted(Counter(j["jenis"] for j in J).items()):

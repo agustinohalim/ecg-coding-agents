@@ -1,15 +1,15 @@
-"""Nilai keluaran agen AgenEKG terhadap rujukan (toleransi Prareg_AgenEKG.md bagian 4).
+"""Scores AgenEKG agent output against the references (tolerances: preregistration, section 4).
 
-Dua bentuk rujukan diterima:
-- pilot (`agenekg_rujukan_pilot.json`): kunci besaran rata di tiap entri, toleransi dari TOL_PILOT;
-- utama (`agenekg_rujukan.json`): `nilai` + `tol` per tugas ({"jenis": "mutlak"|"relatif", "nilai": x}).
-  Tugas tak terjawab: `nilai` = {"unanswerable": true}; benar bila FINAL agen memuat "unanswerable": true.
-  Pada tugas yang bisa dijawab, jawaban "unanswerable" dihitung salah untuk tiap besaran.
+Two reference shapes are accepted:
+- pilot (`agenekg_rujukan_pilot.json`): flat quantity keys in each entry, tolerances from TOL_PILOT;
+- main (`agenekg_rujukan.json`): `nilai` + `tol` per task ({"jenis": "mutlak"|"relatif", "nilai": x}).
+  Unanswerable task: `nilai` = {"unanswerable": true}; correct when the agent's FINAL holds "unanswerable": true.
+  On an answerable task, an "unanswerable" reply counts as wrong for every quantity.
 
-Keluaran: tabel per besaran (Markdown) dan, dengan --json, berkas JSON per besaran untuk analisis.
+Output: a Markdown table per quantity and, with --json, a JSON file per quantity for analysis.
 
-Pakai:
-    python -X utf8 Riset/EKG/agenekg_nilai.py --rujukan Riset/EKG/agenekg_rujukan.json --log C:/Data/AgenEKG_runs/<nama>
+Usage:
+    python -X utf8 analysis/agenekg_nilai.py --rujukan analysis/agenekg_rujukan.json --log <run folder>
 """
 import argparse
 import json
@@ -19,7 +19,7 @@ TOL_PILOT = {"qt_ms": 20.0, "qtcb_ms": 20.0, "qtcf_ms": 20.0}
 
 
 def baku(r):
-    """Ubah entri rujukan ke bentuk (nilai, tol)."""
+    """Pilot entries carry flat quantity keys; main entries already carry (nilai, tol)."""
     if "nilai" in r:
         return r["nilai"], r["tol"]
     nilai = {k: r[k] for k in TOL_PILOT if k in r}
@@ -30,7 +30,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--rujukan", required=True)
     ap.add_argument("--log", required=True)
-    ap.add_argument("--json", default=None, help="tulis hasil per besaran ke berkas ini")
+    ap.add_argument("--json", default=None, help="write per-quantity results to this file")
     a = ap.parse_args()
     ruj = {r["id"]: r for r in json.loads(Path(a.rujukan).read_text(encoding="utf-8"))}
     print("| Tugas | Ulang | Giliran | Eksekusi gagal | Besaran | Rujukan | Agen | Galat | Batas | Dalam toleransi |")
