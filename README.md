@@ -1,14 +1,15 @@
 # ecg-coding-agents
 
-Code, task set, references, and aggregate results for the manuscript ⬜ *(title pending)* (Halim, in
-preparation). The study asks whether code written by small, locally run language-model agents returns QT,
-corrected QT, and frequency-domain heart-rate variability (HRV) values within pre-specified tolerances of
+Code, task set, references, and aggregate results for the manuscript *ECG Coding Agents Fail Before or After
+the Number* (Halim, in preparation). The study asks whether code written by language-model coding agents returns
+QT, corrected QT, and frequency-domain heart-rate variability (HRV) values within pre-specified tolerances of
 references derived from expert annotations.
 
-Three open-weight models (Qwen2.5-Coder-7B-Instruct, Qwen2.5-Coder-3B-Instruct, Llama-3.1-8B-Instruct; 4-bit
-GGUF, served by LM Studio 0.4.28) run 99 tasks five times each in a network-free Docker container. A fixed
-NeuroKit2 pipeline without a language model is the baseline, and an exploratory arm adds a short reference of the
-installed library functions to the system prompt.
+Three open-weight models run locally (Qwen2.5-Coder-7B-Instruct, Qwen2.5-Coder-3B-Instruct,
+Llama-3.1-8B-Instruct; 4-bit GGUF, served by LM Studio 0.4.28) and one commercial model (DeepSeek-V4-flash,
+through an OpenAI-compatible gateway) run 99 tasks five times each; the agent's code runs in a network-free
+Docker container. A fixed NeuroKit2 pipeline without a language model is the baseline, and an exploratory arm
+adds a short reference of the installed library functions to the system prompt of the three local models.
 
 **No PhysioNet data are included.** The three databases are open (Open Data Commons Attribution 1.0) and are
 downloaded from PhysioNet: QT Database 1.0.0, Fantasia 1.0.0, and the MIT-BIH Arrhythmia Database. The
@@ -29,7 +30,7 @@ archived separately ⬜ (Zenodo DOI).
 | `analysis/agenekg_dasar_nk.py` | Library-only NeuroKit2 baseline (DWT, peak, CWT delineation) |
 | `analysis/agenekg_nilai.py`, `agenekg_analisis.py` | Scoring against the references, error taxonomy E1–E8, bootstrap CIs clustered by record, paired sign-flip permutation tests |
 | `analysis/agenekg_kode_ulang_bahan.py`, `agenekg_kode_ulang_nilai.py` | Blinded recoding material for the 10 % sample, and agreement (Cohen's kappa) with the automatic codes |
-| `results/` | Outputs of `agenekg_analisis.py`: main runs (`analisis_utama`), baseline (`analisis_dasar_nk`), API-documentation arm per model (`analisis_api*`) |
+| `results/` | Outputs of `agenekg_analisis.py`: main runs of the local models (`analisis_utama`), the four models together (`analisis_flash`), DeepSeek-V4-flash against the three baseline methods (`analisis_flash_vs_nk`), baseline (`analisis_dasar_nk`), API-documentation arm per model (`analisis_api*`) |
 | `results/kode_ulang/` | The 145-run sample, the key, the blind LLM recoding with reasons, the codes after the author's adjudication, and both agreement reports |
 | `registration/` | Redacted copy of the preregistration (see below) |
 
@@ -47,7 +48,10 @@ wrong).
    container (see its docstring), then `python -I -X utf8 analysis/agenekg_tugas.py`.
 4. Agent runs, with a model loaded in LM Studio (context 16,384 tokens):
    `python -X utf8 analysis/agenekg_agen.py --tugas analysis/agenekg_tugas.json --model <id> --ulang 5 --keluar <folder>`.
-   The API-documentation arm uses `agenekg_agen_api.py` with `--ulang-ke 1`.
+   The API-documentation arm uses `agenekg_agen_api.py` with `--ulang-ke 1`. For a hosted model add
+   `--url <OpenAI-compatible endpoint> --kunci <environment variable holding the key>`; `--luar-puncak` waits
+   out DeepSeek's peak-price hours. Existing `<task>_u<repeat>.json` files are skipped, so an interrupted run
+   resumes where it stopped.
 5. Baseline: `python -X utf8 analysis/agenekg_dasar_nk.py --metode dwt --keluar <folder>`.
 6. Scoring: `python -X utf8 analysis/agenekg_analisis.py --run <name>=<folder> [--run ...] --json <file>`.
 
@@ -58,9 +62,10 @@ Model files and their SHA-256 hashes are listed in the manuscript's supplementar
 The study was preregistered on 7 November 2026, before any main run (first commit of the registration file in
 the author's private research repository: 7a6bca8, 2026-11-07); every later change is dated in the file and in
 the manuscript (Section 2.9). `registration/Prareg_AgenEKG_disunting.md` is a public copy in Indonesian, as of
-21 November 2026, with one redaction: the name of the third-party gateway used for the commercial runs (two
-lines in the 7 November deviation). The unredacted file has md5 `6729d7056f26b2089d4b0997489d621d`; files it
-names (`Hasil_AgenEKG_*.md`) are internal result notes whose numbers appear in the manuscript.
+22 November 2026 (last change: commit f3d746a, the DeepSeek-V4-flash runs completed to 495), with one redaction:
+the name of the third-party gateway used for the commercial runs (two lines in the 7 November deviation). The
+unredacted file has md5 `6cd8e42d2c287aeed89cfcf149f8346c`; files it names (`Hasil_AgenEKG_*.md`,
+`jalan_flash.ps1`) are internal notes and a launch script whose numbers and settings appear in the manuscript.
 
 ## Licence
 

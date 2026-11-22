@@ -1,7 +1,7 @@
 {
-  "title": "ecg-coding-agents: small local coding agents computing QT, QTc, and HRV from PhysioNet ECG recordings",
+  "title": "ecg-coding-agents: local and commercial coding agents computing QT, QTc, and HRV from PhysioNet ECG recordings",
   "upload_type": "software",
-  "description": "Harness, task set, expert-derived references, scoring, and aggregate results for a preregistered evaluation of language-model coding agents that write and run Python to measure QT, corrected QT, and frequency-domain heart-rate variability from PhysioNet recordings (QT Database, Fantasia, MIT-BIH Arrhythmia Database). Three open-weight models (Qwen2.5-Coder-7B-Instruct, Qwen2.5-Coder-3B-Instruct, Llama-3.1-8B-Instruct) run 99 tasks in a network-free container; a library-only NeuroKit2 pipeline is the baseline, and an exploratory arm appends a reference of the installed library functions to the system prompt. No PhysioNet data are included.",
+  "description": "Harness, task set, expert-derived references, scoring, and aggregate results for a preregistered evaluation of language-model coding agents that write and run Python to measure QT, corrected QT, and frequency-domain heart-rate variability from PhysioNet recordings (QT Database, Fantasia, MIT-BIH Arrhythmia Database). Three locally run open-weight models (Qwen2.5-Coder-7B-Instruct, Qwen2.5-Coder-3B-Instruct, Llama-3.1-8B-Instruct) and one commercial model (DeepSeek-V4-flash) run 99 tasks five times each, with the agent's code executed in a network-free container; a library-only NeuroKit2 pipeline is the baseline, and an exploratory arm appends a reference of the installed library functions to the system prompt of the local models. No PhysioNet data are included.",
   "creators": [
     {
       "name": "Halim, Agustino",

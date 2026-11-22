@@ -262,4 +262,22 @@ kode ulang dijalankan.
    ketidaksepakatan dengan melihat kedua kode (R007 E5, R097 E4, R124 E5; `Hasil_AgenEKG_11.md`). Kesepakatan
    tersamar tetap dilaporkan sebagai ukuran utama; penengahan dilaporkan terpisah.
 
+**21 November 2026 — run DeepSeek-V4-flash dilanjutkan sampai 495 (diminta pengguna: "lanjut").** Penyimpangan
+19 Nov mencatat run komersial berhenti pada 220/495 (flash, QT saja) karena kunci gateway kena batas anggaran,
+dan tidak dipakai untuk klaim. Kunci gateway diperbarui pengguna 21 Nov. Keputusan melanjutkan diambil
+**sesudah** hasil ketiga model lokal dan hasil sementara flash (`Hasil_AgenEKG_6.md`) diketahui; dicatat sebagai
+keputusan pasca-hasil. Ditulis sebelum run dilanjutkan.
+
+1. Model, penyedia, dan kerangka sama dengan run 7–8 Nov: `deepseek-v4-flash-openai` lewat gateway yang sama,
+   `agenekg_agen.py` tanpa perubahan (md5 `0a751ebb…`), suhu bawaan, 10 giliran, `--luar-puncak`. Uji satu
+   panggilan 21 Nov: HTTP 200, medan `model` jawaban `deepseek-flash` seperti run lama; halaman harga resmi hari
+   itu masih menyebut DeepSeek-V4.1-Flash-1017. Fitur alat opsional yang ditambahkan penyedia 13 Nov tidak
+   diminta skrip, dan kode agen berjalan tanpa jaringan.
+2. Hanya 275 tugas-ulangan yang belum ada (QT 5, HRV 170, jebakan 100); 220 yang ada tidak diulang. Ulangan dibagi
+   ke dua proses (`--ulang-ke 1,3,5` dan `2,4`) seperti run 7–8 Nov (`Riset/EKG/jalan_flash.ps1`).
+3. Selang waktu dua pekan antara bagian lama dan baru dilaporkan sebagai batasan; perbandingan QT flash memakai
+   semua 225 run QT, dengan pemeriksaan kepekaan yang hanya memakai 220 run lama.
+4. Pro tidak dilanjutkan (44/495, tetap hanya disebut di Limitations).
+5. Analisis memakai `agenekg_analisis.py` tanpa perubahan (md5 `67dad0a3…`), sama dengan model lokal.
+
 Tidak ada butir lain yang berubah.
