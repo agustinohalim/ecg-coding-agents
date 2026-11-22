@@ -13,8 +13,9 @@ adds a short reference of the installed library functions to the system prompt o
 
 **No PhysioNet data are included.** The three databases are open (Open Data Commons Attribution 1.0) and are
 downloaded from PhysioNet: QT Database 1.0.0, Fantasia 1.0.0, and the MIT-BIH Arrhythmia Database. The
-reference values in `analysis/agenekg_rujukan*.json` are derived from their annotations. Agent transcripts are
-archived separately ⬜ (Zenodo DOI).
+reference values in `analysis/agenekg_rujukan*.json` are derived from their annotations. Every agent and
+baseline transcript used in the manuscript is in `transcripts/` (one JSON file per task run); they contain the
+agents' code and its output, not the recordings.
 
 ## Layout
 
@@ -33,6 +34,7 @@ archived separately ⬜ (Zenodo DOI).
 | `analysis/agenekg_kode_ulang_bahan.py`, `agenekg_kode_ulang_nilai.py` | Blinded recoding material for the 10 % sample, and agreement (Cohen's kappa) with the automatic codes |
 | `results/` | Outputs of `agenekg_analisis.py`: main runs of the local models (`analisis_utama`), the four models together (`analisis_flash`), DeepSeek-V4-flash against the three baseline methods (`analisis_flash_vs_nk`), baseline (`analisis_dasar_nk`), API-documentation arm per model (`analisis_api*`) |
 | `results/kode_ulang/` | The 145-run sample, the key, the blind LLM recoding with reasons, the codes after the author's adjudication, and both agreement reports |
+| `transcripts/` | One zip per run: `main_*` (four models, 495 task runs each), `baseline_nk_*` (94 answerable tasks per delineation method), `apidoc_*` (API-documentation arm, 99 per local model) |
 | `registration/` | Redacted copy of the preregistration (see below) |
 
 Identifiers, printed output, and log fields are in Indonesian (*tugas* = task, *rujukan* = reference, *nilai* =
@@ -66,6 +68,10 @@ in-container baseline script (`DALAM` in `agenekg_dasar_nk.py`) is unchanged.
    resumes where it stopped.
 5. Baseline: `python -X utf8 analysis/agenekg_dasar_nk.py --metode dwt --keluar <folder>`.
 6. Scoring: `python -X utf8 analysis/agenekg_analisis.py --run <name>=<folder> [--run ...] --json <file>`.
+   To rescore without rerunning the agents, unzip `transcripts/` and pass the extracted folders, e.g.
+   `--run flash=transcripts/main_deepseek-v4-flash --run qwen7b=transcripts/main_qwen25coder7b
+   --run qwen3b=transcripts/main_qwen25coder3b --run llama8b=transcripts/main_llama31_8b`, which reproduces
+   `results/analisis_flash.md`.
 
 Model files and their SHA-256 hashes are listed in the manuscript's supplementary material (S3).
 
