@@ -1,7 +1,7 @@
 # ecg-coding-agents
 
-Code, task set, references, and aggregate results for the manuscript *ECG Coding Agents Fail Before or After
-the Number* (Halim, in preparation). The study asks whether code written by language-model coding agents returns
+Code, task set, references, and aggregate results for the manuscript *Four Coding Agents Measuring QT and
+HRV Against Expert Annotations* (Halim, in preparation). The study asks whether code written by language-model coding agents returns
 QT, corrected QT, and frequency-domain heart-rate variability (HRV) values within pre-specified tolerances of
 references derived from expert annotations.
 
