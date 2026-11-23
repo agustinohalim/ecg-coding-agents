@@ -1,0 +1,15 @@
+## HRV against age-cohort signal-free baselines (fixed 20 % tolerance, heart rate excluded; 95 % interval)
+
+- 34 HRV tasks: 19 elderly, 15 young
+- cohort median: 20.6 % (heart rate excluded)
+- cohort + heart-rate model: 21.6 % (heart rate excluded)
+- main_qwen25coder7b (0.0 %) minus cohort median: -20.6 points (-27.9 to -14.2), p = 0.0001, 34 tasks
+- main_qwen25coder7b (0.0 %) minus cohort + heart-rate model: -21.6 points (-27.0 to -16.7), p = 0.0001, 34 tasks
+- main_qwen25coder3b (0.2 %) minus cohort median: -20.4 points (-27.5 to -13.7), p = 0.0001, 34 tasks
+- main_qwen25coder3b (0.2 %) minus cohort + heart-rate model: -21.4 points (-26.6 to -16.4), p = 0.0001, 34 tasks
+- main_llama31_8b (2.6 %) minus cohort median: -17.9 points (-24.7 to -11.9), p = 0.0001, 34 tasks
+- main_llama31_8b (2.6 %) minus cohort + heart-rate model: -18.9 points (-24.2 to -13.7), p = 0.0001, 34 tasks
+- main_deepseek-v4-flash (61.6 %) minus cohort median: +41.0 points (+32.1 to +49.5), p = 0.0001, 34 tasks
+- main_deepseek-v4-flash (61.6 %) minus cohort + heart-rate model: +40.0 points (+32.6 to +47.5), p = 0.0001, 34 tasks
+- baseline_nk_dwt (71.6 %) minus cohort median: +51.0 points (+34.8 to +66.2), p = 0.0001, 34 tasks
+- baseline_nk_dwt (71.6 %) minus cohort + heart-rate model: +50.0 points (+38.2 to +61.8), p = 0.0001, 34 tasks

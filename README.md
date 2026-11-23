@@ -1,7 +1,7 @@
 # ecg-coding-agents
 
 Code, task set, references, and aggregate results for the manuscript *Four Coding Agents Against Expert
-ECG Annotations: One Beat Signal-Free Answers on HRV, Not Demonstrably on QT* (in preparation). The study asks whether code written by language-model coding agents returns
+ECG Annotations: One Outscored Signal-Free Answers on HRV, Not Demonstrably on QT* (in preparation). The study asks whether code written by language-model coding agents returns
 QT, corrected QT, and frequency-domain heart-rate variability (HRV) values within pre-specified tolerances of
 references derived from expert annotations.
 
@@ -42,6 +42,7 @@ agents' code and its output, not the recordings.
 | `analysis/agenekg_qt_per_run.py` | Post hoc: run-level QT agreement (Bland–Altman bias and limits of agreement, Spearman, Theil–Sen), constant and RR-model baselines |
 | `analysis/agenekg_tugas_konfirmasi.py`, `agenekg_tugas_konfirmasi.json`, `agenekg_rujukan_konfirmasi.json`, `agenekg_konfirmasi_nilai.py` | Confirmatory QT test: the 31 held-out tasks and references, and the analysis fixed before the runs |
 | `analysis/agenekg_cek_panel3.py`, `analysis/agenekg_hrv_model_hr.py` | Post hoc (v1.1.1): within-20 ms paired tests, runs without an answer, limits of agreement for repeated runs, heart-rate model for HRV |
+| `analysis/agenekg_hrv_umur.py`, `analysis/agenekg_hrv_domain_umur.py` | Post hoc (v1.1.2): HRV signal-free baselines that use the age group in the Fantasia record name, and all HRV baselines and the pipeline split by time and frequency domain |
 | `results/post_hoc/`, `results/confirmatory/` | Printed outputs of the post hoc scripts and of the confirmatory analysis; `audit_asal.md` is the reading of 30 unmatched QT numbers |
 | `transcripts/confirm_*` | Confirmatory runs: DeepSeek-V4-flash, 31 tasks × 5 (155), and the NeuroKit2 DWT baseline on the same 31 tasks |
 
@@ -131,6 +132,23 @@ python -X utf8 analysis/agenekg_cek_panel3.py analysis <runs> transcripts/confir
 ```
 
 `<runs>` holds `main_<model>/` for the four models, unzipped from `transcripts/`.
+
+## Version 1.1.2: age-group baselines and domain split for HRV
+
+Version 1.1.2 (23 November 2026) adds two exploratory scripts, released as run (md5
+`bd13106a6ad542cddd8cf6010174259c` and `4b7d8e489845d3ad2262c55098395354`), and their outputs
+`results/post_hoc/hrv_umur.txt` and `results/post_hoc/hrv_domain_umur.txt`. Fantasia record names encode the age
+group (`f1o..` elderly, `f1y..` young) and every task text gives the record name, so two leave-one-out HRV
+baselines use it: the median over the other tasks of the same group, and the heart-rate model with a group
+intercept. The second script reports every signal-free baseline, the commercial agent, and the NeuroKit2 DWT
+pipeline separately for the time domain (SDNN, RMSSD, pNN50) and the frequency domain (LF, HF, LF/HF)
+(manuscript Sections 3.7, 4.8, Table 6). Rerunning both from this repository reproduced the outputs byte for byte.
+Nothing else changed.
+
+```
+python -X utf8 analysis/agenekg_hrv_umur.py analysis <runs>
+python -X utf8 analysis/agenekg_hrv_domain_umur.py analysis <runs>
+```
 
 ## Licence
 

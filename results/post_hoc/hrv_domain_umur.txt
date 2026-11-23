@@ -1,0 +1,14 @@
+## HRV by domain (fixed 20 % tolerance; 95 % task-bootstrap interval)
+
+- time: agent 81.8 %, pipeline 81.4 %, constant 22.5 %, heart-rate model 19.6 %, age-group median 28.4 %, age-group + heart-rate model 29.4 %
+  - agent minus constant: +59.2 points (+49.6 to +68.4), p = 0.0001, 34 tasks
+  - agent minus heart-rate model: +62.2 points (+53.3 to +70.6), p = 0.0001, 34 tasks
+  - agent minus age-group median: +53.3 points (+41.8 to +64.1), p = 0.0001, 34 tasks
+  - agent minus age-group + heart-rate model: +52.4 points (+44.3 to +60.8), p = 0.0001, 34 tasks
+  - agent minus pipeline: +0.4 points (-7.8 to +9.4), p = 0.9689, 34 tasks
+- frequency: agent 41.4 %, pipeline 61.8 %, constant 11.8 %, heart-rate model 8.8 %, age-group median 12.7 %, age-group + heart-rate model 13.7 %
+  - agent minus constant: +29.6 points (+22.0 to +36.9), p = 0.0001, 34 tasks
+  - agent minus heart-rate model: +32.5 points (+25.5 to +39.4), p = 0.0001, 34 tasks
+  - agent minus age-group median: +28.6 points (+20.6 to +36.3), p = 0.0001, 34 tasks
+  - agent minus age-group + heart-rate model: +27.6 points (+19.0 to +36.3), p = 0.0001, 34 tasks
+  - agent minus pipeline: -20.4 points (-32.0 to -9.0), p = 0.0024, 34 tasks
