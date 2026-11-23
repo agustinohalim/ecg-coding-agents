@@ -1,0 +1,250 @@
+[
+ {
+  "id": "qt_sel100",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel100.hea",
+   "qtdb/data/qt-database-1.0.0/sel100.dat"
+  ],
+  "teks": "Record `sel100` (WFDB format: sel100.hea, sel100.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150320 and sample 156120 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel104",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel104.hea",
+   "qtdb/data/qt-database-1.0.0/sel104.dat"
+  ],
+  "teks": "Record `sel104` (WFDB format: sel104.hea, sel104.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150376 and sample 153656 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel117",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel117.hea",
+   "qtdb/data/qt-database-1.0.0/sel117.dat"
+  ],
+  "teks": "Record `sel117` (WFDB format: sel117.hea, sel117.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150493 and sample 159007 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel123",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel123.hea",
+   "qtdb/data/qt-database-1.0.0/sel123.dat"
+  ],
+  "teks": "Record `sel123` (WFDB format: sel123.hea, sel123.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150409 and sample 159368 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel14046",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel14046.hea",
+   "qtdb/data/qt-database-1.0.0/sel14046.dat"
+  ],
+  "teks": "Record `sel14046` (WFDB format: sel14046.hea, sel14046.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150181 and sample 155605 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel16272",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel16272.hea",
+   "qtdb/data/qt-database-1.0.0/sel16272.dat"
+  ],
+  "teks": "Record `sel16272` (WFDB format: sel16272.hea, sel16272.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150442 and sample 158188 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel16273",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel16273.hea",
+   "qtdb/data/qt-database-1.0.0/sel16273.dat"
+  ],
+  "teks": "Record `sel16273` (WFDB format: sel16273.hea, sel16273.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150298 and sample 156292 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel16539",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel16539.hea",
+   "qtdb/data/qt-database-1.0.0/sel16539.dat"
+  ],
+  "teks": "Record `sel16539` (WFDB format: sel16539.hea, sel16539.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150220 and sample 157204 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel16773",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel16773.hea",
+   "qtdb/data/qt-database-1.0.0/sel16773.dat"
+  ],
+  "teks": "Record `sel16773` (WFDB format: sel16773.hea, sel16773.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150292 and sample 156907 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel17152",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel17152.hea",
+   "qtdb/data/qt-database-1.0.0/sel17152.dat"
+  ],
+  "teks": "Record `sel17152` (WFDB format: sel17152.hea, sel17152.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150163 and sample 154150 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel213",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel213.hea",
+   "qtdb/data/qt-database-1.0.0/sel213.dat"
+  ],
+  "teks": "Record `sel213` (WFDB format: sel213.hea, sel213.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150205 and sample 152704 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel221",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel221.hea",
+   "qtdb/data/qt-database-1.0.0/sel221.dat"
+  ],
+  "teks": "Record `sel221` (WFDB format: sel221.hea, sel221.dat; two ECG channels). Consider only the beats whose R peak lies between sample 156614 and sample 159460 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel223",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel223.hea",
+   "qtdb/data/qt-database-1.0.0/sel223.dat"
+  ],
+  "teks": "Record `sel223` (WFDB format: sel223.hea, sel223.dat; two ECG channels). Consider only the beats whose R peak lies between sample 167907 and sample 172862 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel231",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel231.hea",
+   "qtdb/data/qt-database-1.0.0/sel231.dat"
+  ],
+  "teks": "Record `sel231` (WFDB format: sel231.hea, sel231.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150372 and sample 161485 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel301",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel301.hea",
+   "qtdb/data/qt-database-1.0.0/sel301.dat"
+  ],
+  "teks": "Record `sel301` (WFDB format: sel301.hea, sel301.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150239 and sample 153278 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel302",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel302.hea",
+   "qtdb/data/qt-database-1.0.0/sel302.dat"
+  ],
+  "teks": "Record `sel302` (WFDB format: sel302.hea, sel302.dat; two ECG channels). Consider only the beats whose R peak lies between sample 151140 and sample 154750 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel31",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel31.hea",
+   "qtdb/data/qt-database-1.0.0/sel31.dat"
+  ],
+  "teks": "Record `sel31` (WFDB format: sel31.hea, sel31.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150282 and sample 156368 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel32",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel32.hea",
+   "qtdb/data/qt-database-1.0.0/sel32.dat"
+  ],
+  "teks": "Record `sel32` (WFDB format: sel32.hea, sel32.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150348 and sample 155630 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel41",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel41.hea",
+   "qtdb/data/qt-database-1.0.0/sel41.dat"
+  ],
+  "teks": "Record `sel41` (WFDB format: sel41.hea, sel41.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150271 and sample 155113 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel43",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel43.hea",
+   "qtdb/data/qt-database-1.0.0/sel43.dat"
+  ],
+  "teks": "Record `sel43` (WFDB format: sel43.hea, sel43.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150289 and sample 154874 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel44",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel44.hea",
+   "qtdb/data/qt-database-1.0.0/sel44.dat"
+  ],
+  "teks": "Record `sel44` (WFDB format: sel44.hea, sel44.dat; two ECG channels). Consider only the beats whose R peak lies between sample 151242 and sample 153608 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel45",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel45.hea",
+   "qtdb/data/qt-database-1.0.0/sel45.dat"
+  ],
+  "teks": "Record `sel45` (WFDB format: sel45.hea, sel45.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150285 and sample 156925 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel51",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel51.hea",
+   "qtdb/data/qt-database-1.0.0/sel51.dat"
+  ],
+  "teks": "Record `sel51` (WFDB format: sel51.hea, sel51.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150500 and sample 159271 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel803",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel803.hea",
+   "qtdb/data/qt-database-1.0.0/sel803.dat"
+  ],
+  "teks": "Record `sel803` (WFDB format: sel803.hea, sel803.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150208 and sample 154036 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel821",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel821.hea",
+   "qtdb/data/qt-database-1.0.0/sel821.dat"
+  ],
+  "teks": "Record `sel821` (WFDB format: sel821.hea, sel821.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150197 and sample 154214 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel847",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel847.hea",
+   "qtdb/data/qt-database-1.0.0/sel847.dat"
+  ],
+  "teks": "Record `sel847` (WFDB format: sel847.hea, sel847.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150284 and sample 153271 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sel883",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sel883.hea",
+   "qtdb/data/qt-database-1.0.0/sel883.dat"
+  ],
+  "teks": "Record `sel883` (WFDB format: sel883.hea, sel883.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150458 and sample 157893 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sele0104",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sele0104.hea",
+   "qtdb/data/qt-database-1.0.0/sele0104.dat"
+  ],
+  "teks": "Record `sele0104` (WFDB format: sele0104.hea, sele0104.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150338 and sample 158141 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sele0110",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sele0110.hea",
+   "qtdb/data/qt-database-1.0.0/sele0110.dat"
+  ],
+  "teks": "Record `sele0110` (WFDB format: sele0110.hea, sele0110.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150897 and sample 153309 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sele0203",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sele0203.hea",
+   "qtdb/data/qt-database-1.0.0/sele0203.dat"
+  ],
+  "teks": "Record `sele0203` (WFDB format: sele0203.hea, sele0203.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150250 and sample 155707 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ },
+ {
+  "id": "qt_sele0606",
+  "berkas": [
+   "qtdb/data/qt-database-1.0.0/sele0606.hea",
+   "qtdb/data/qt-database-1.0.0/sele0606.dat"
+  ],
+  "teks": "Record `sele0606` (WFDB format: sele0606.hea, sele0606.dat; two ECG channels). Consider only the beats whose R peak lies between sample 150297 and sample 155129 (inclusive, 0-based sample index). For each such beat, QT is measured as in multi-lead manual measurement: from the earliest QRS onset to the latest end of the T wave, taking both channels into account. RR = interval from the previous beat's R peak to this beat's R peak, in seconds; skip QTc for the first beat in the window. Report the mean QT in milliseconds over these beats, the mean Bazett-corrected QTc (QT / sqrt(RR)) and the mean Fridericia-corrected QTc (QT / cbrt(RR)), both in milliseconds. Answer as FINAL: {\"qt_ms\": <number>, \"qtcb_ms\": <number>, \"qtcf_ms\": <number>}."
+ }
+]

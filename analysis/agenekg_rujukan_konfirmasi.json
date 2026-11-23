@@ -1,0 +1,746 @@
+[
+ {
+  "id": "qt_sel100",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 399.33,
+   "qtcb_ms": 446.94,
+   "qtcf_ms": 430.29
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 30
+ },
+ {
+  "id": "qt_sel104",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 552.94,
+   "qtcb_ms": 613.96,
+   "qtcf_ms": 593.43
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 17
+ },
+ {
+  "id": "qt_sel117",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 448.53,
+   "qtcb_ms": 414.64,
+   "qtcf_ms": 425.69
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 30
+ },
+ {
+  "id": "qt_sel123",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 454.0,
+   "qtcb_ms": 410.81,
+   "qtcf_ms": 424.58
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 30
+ },
+ {
+  "id": "qt_sel14046",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 343.47,
+   "qtcb_ms": 397.64,
+   "qtcf_ms": 378.58
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 30
+ },
+ {
+  "id": "qt_sel16272",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 411.07,
+   "qtcb_ms": 398.71,
+   "qtcf_ms": 402.95
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 30
+ },
+ {
+  "id": "qt_sel16273",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 383.6,
+   "qtcb_ms": 422.9,
+   "qtcf_ms": 409.41
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 30
+ },
+ {
+  "id": "qt_sel16539",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 420.93,
+   "qtcb_ms": 433.03,
+   "qtcf_ms": 428.29
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 30
+ },
+ {
+  "id": "qt_sel16773",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 374.8,
+   "qtcb_ms": 393.1,
+   "qtcf_ms": 386.82
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 30
+ },
+ {
+  "id": "qt_sel17152",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 320.27,
+   "qtcb_ms": 432.99,
+   "qtcf_ms": 391.59
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 30
+ },
+ {
+  "id": "qt_sel213",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 344.84,
+   "qtcb_ms": 463.88,
+   "qtcf_ms": 419.96
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 19
+ },
+ {
+  "id": "qt_sel221",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 403.25,
+   "qtcb_ms": 470.67,
+   "qtcf_ms": 446.4
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 16
+ },
+ {
+  "id": "qt_sel223",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 475.2,
+   "qtcb_ms": 574.84,
+   "qtcf_ms": 539.11
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 30
+ },
+ {
+  "id": "qt_sel231",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 493.11,
+   "qtcb_ms": 450.47,
+   "qtcf_ms": 463.27
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 36
+ },
+ {
+  "id": "qt_sel301",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 417.5,
+   "qtcb_ms": 464.4,
+   "qtcf_ms": 447.85
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 16
+ },
+ {
+  "id": "qt_sel302",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 300.8,
+   "qtcb_ms": 389.13,
+   "qtcf_ms": 357.12
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 25
+ },
+ {
+  "id": "qt_sel31",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 538.53,
+   "qtcb_ms": 591.27,
+   "qtcf_ms": 574.0
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 30
+ },
+ {
+  "id": "qt_sel32",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 435.33,
+   "qtcb_ms": 509.88,
+   "qtcf_ms": 483.34
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 30
+ },
+ {
+  "id": "qt_sel41",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 340.13,
+   "qtcb_ms": 418.79,
+   "qtcf_ms": 391.26
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 30
+ },
+ {
+  "id": "qt_sel43",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 375.87,
+   "qtcb_ms": 473.86,
+   "qtcf_ms": 438.7
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 30
+ },
+ {
+  "id": "qt_sel44",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 462.67,
+   "qtcb_ms": 564.6,
+   "qtcf_ms": 527.53
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 15
+ },
+ {
+  "id": "qt_sel45",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 457.73,
+   "qtcb_ms": 479.28,
+   "qtcf_ms": 472.05
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 30
+ },
+ {
+  "id": "qt_sel51",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 471.33,
+   "qtcb_ms": 428.29,
+   "qtcf_ms": 441.91
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 30
+ },
+ {
+  "id": "qt_sel803",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 385.78,
+   "qtcb_ms": 407.68,
+   "qtcf_ms": 400.28
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 18
+ },
+ {
+  "id": "qt_sel821",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 325.79,
+   "qtcb_ms": 433.6,
+   "qtcf_ms": 393.88
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 29
+ },
+ {
+  "id": "qt_sel847",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 450.55,
+   "qtcb_ms": 412.43,
+   "qtcf_ms": 424.34
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 11
+ },
+ {
+  "id": "qt_sel883",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 461.6,
+   "qtcb_ms": 456.36,
+   "qtcf_ms": 458.07
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 30
+ },
+ {
+  "id": "qt_sele0104",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 437.47,
+   "qtcb_ms": 421.94,
+   "qtcf_ms": 426.93
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 30
+ },
+ {
+  "id": "qt_sele0110",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 427.64,
+   "qtcb_ms": 437.1,
+   "qtcf_ms": 433.76
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 11
+ },
+ {
+  "id": "qt_sele0203",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 322.8,
+   "qtcb_ms": 374.0,
+   "qtcf_ms": 355.88
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 30
+ },
+ {
+  "id": "qt_sele0606",
+  "jenis": "qt",
+  "nilai": {
+   "qt_ms": 370.4,
+   "qtcb_ms": 455.48,
+   "qtcf_ms": 425.39
+  },
+  "tol": {
+   "qt_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcb_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   },
+   "qtcf_ms": {
+    "jenis": "mutlak",
+    "nilai": 20.0
+   }
+  },
+  "denyut": 30
+ }
+]

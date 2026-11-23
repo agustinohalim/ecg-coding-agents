@@ -1,0 +1,61 @@
+## 1. Agent minus constant answer, mean per-task difference in points (95 % task-bootstrap CI)
+
+- main_qwen25coder7b, qt, ketat: -22.2 (-31.1 to -14.1)
+- main_qwen25coder7b, qt, benar: -40.7 (-51.9 to -30.4)
+- main_qwen25coder7b, qt, longgar: -66.7 (-77.0 to -56.3)
+- main_qwen25coder7b, hrv, benar: -19.7 (-26.1 to -13.9)
+- main_qwen25coder3b, qt, ketat: -22.2 (-31.9 to -14.1)
+- main_qwen25coder3b, qt, benar: -40.7 (-51.9 to -30.4)
+- main_qwen25coder3b, qt, longgar: -66.7 (-77.0 to -56.3)
+- main_qwen25coder3b, hrv, benar: -19.6 (-25.8 to -13.6)
+- main_llama31_8b, qt, ketat: -22.1 (-31.0 to -13.9)
+- main_llama31_8b, qt, benar: -40.6 (-51.6 to -30.1)
+- main_llama31_8b, qt, longgar: -66.2 (-76.3 to -56.0)
+- main_llama31_8b, hrv, benar: -17.5 (-23.5 to -11.9)
+- main_deepseek-v4-flash, qt, ketat: +4.7 (-5.8 to +15.0)
+- main_deepseek-v4-flash, qt, benar: +6.5 (-4.9 to +17.6)
+- main_deepseek-v4-flash, qt, longgar: -0.9 (-9.5 to +8.1)
+- main_deepseek-v4-flash, hrv, benar: +46.8 (+40.1 to +53.2)
+- baseline_nk_dwt, qt, ketat: -14.8 (-25.2 to -3.7)
+- baseline_nk_dwt, qt, benar: -28.1 (-42.2 to -14.1)
+- baseline_nk_dwt, qt, longgar: -45.2 (-61.5 to -27.4)
+- baseline_nk_dwt, hrv, benar: +55.9 (+45.4 to +66.0)
+
+## 2. Continuous agreement on QT tasks (per-task median answer vs reference; 95 % task-bootstrap CI)
+
+| Model | Quantity | Tasks | Median abs error (ms) | Median signed error (ms) | Spearman rho | Theil-Sen slope |
+|---|---|---|---|---|---|---|
+| main_qwen25coder7b | qt_ms | 4 | — | — | — | — |
+| main_qwen25coder7b | qtcb_ms | 4 | — | — | — | — |
+| main_qwen25coder7b | qtcf_ms | 4 | — | — | — | — |
+| main_qwen25coder3b | qt_ms | 5 | 256.57 (65.23 to 415.65) | -256.57 (-415.65 to 65.23) | 0.50 (nan to nan) | 3.05 (nan to nan) |
+| main_qwen25coder3b | qtcb_ms | 4 | — | — | — | — |
+| main_qwen25coder3b | qtcf_ms | 4 | — | — | — | — |
+| main_llama31_8b | qt_ms | 19 | 394.60 (153.69 to 49689.37) | -33.25 (-165.16 to 49689.37) | 0.32 (-0.11 to 0.64) | 1.80 (-1.55 to 968.47) |
+| main_llama31_8b | qtcb_ms | 15 | 476.09 (101.35 to 11174.44) | 100.32 (-403.03 to 1422.78) | -0.19 (-0.72 to 0.40) | -9.69 (-716.84 to 20.47) |
+| main_llama31_8b | qtcf_ms | 14 | 384.43 (216.79 to 26459.95) | 260.32 (-71.73 to 26459.95) | 0.27 (-0.43 to 0.70) | 6.07 (-492.62 to 337.87) |
+| main_deepseek-v4-flash | qt_ms | 45 | 13.00 (7.33 to 16.77) | -4.50 (-7.47 to 2.83) | 0.66 (0.38 to 0.87) | 0.76 (0.51 to 0.96) |
+| main_deepseek-v4-flash | qtcb_ms | 45 | 10.22 (7.35 to 18.05) | -3.81 (-7.56 to 3.06) | 0.80 (0.64 to 0.90) | 0.69 (0.48 to 0.93) |
+| main_deepseek-v4-flash | qtcf_ms | 45 | 9.98 (7.11 to 17.18) | -3.96 (-7.22 to 3.05) | 0.71 (0.52 to 0.85) | 0.60 (0.34 to 0.89) |
+| baseline_nk_dwt | qt_ms | 44 | 92.63 (61.52 to 100.66) | 92.63 (63.24 to 100.66) | 0.24 (-0.08 to 0.53) | 0.46 (-0.14 to 0.97) |
+| baseline_nk_dwt | qtcb_ms | 44 | 99.68 (73.59 to 108.43) | 96.69 (67.34 to 107.89) | 0.21 (-0.13 to 0.53) | 0.37 (-0.32 to 0.94) |
+| baseline_nk_dwt | qtcf_ms | 44 | 97.56 (71.33 to 106.76) | 95.81 (64.88 to 105.74) | 0.12 (-0.23 to 0.45) | 0.23 (-0.47 to 0.84) |
+| constant (leave-one-out) | qt_ms | 45 | 26.94 (14.40 to 42.87) | 2.19 (-13.38 to 11.87) | -0.88 (-0.89 to -0.83) | -0.01 (-0.02 to 0.00) |
+| constant (leave-one-out) | qtcb_ms | 45 | 32.57 (20.43 to 37.63) | 0.05 (-20.43 to 13.59) | -0.88 (-0.89 to -0.83) | -0.00 (-0.01 to 0.00) |
+| constant (leave-one-out) | qtcf_ms | 45 | 25.80 (16.03 to 33.46) | -0.08 (-16.03 to 12.24) | -0.88 (-0.89 to -0.83) | -0.01 (-0.01 to 0.00) |
+
+Paired: per-task |answer - ref| minus |constant - ref| (ms), median over tasks (95 % CI); tasks closer
+
+- main_deepseek-v4-flash, qt_ms: -12.3 (-23.1 to -1.8); agent closer on 30/45 tasks
+- main_deepseek-v4-flash, qtcb_ms: -10.0 (-24.7 to -1.7); agent closer on 30/45 tasks
+- main_deepseek-v4-flash, qtcf_ms: -10.5 (-18.6 to +0.4); agent closer on 28/45 tasks
+- baseline_nk_dwt, qt_ms: +57.9 (+38.3 to +79.2); agent closer on 12/44 tasks
+- baseline_nk_dwt, qtcb_ms: +70.0 (+37.8 to +85.5); agent closer on 7/44 tasks
+- baseline_nk_dwt, qtcf_ms: +67.9 (+49.8 to +87.8); agent closer on 10/44 tasks
+
+## 3. Constant from 31 eligible QT Database records outside the tasks
+
+Median: qt_ms 417.5 ms, qtcb_ms 433.6 ms, qtcf_ms 426.9 ms
+- 10 ms: 34/135 (25.2 %)
+- 20 ms: 51/135 (37.8 %)
+- 40 ms: 92/135 (68.1 %)

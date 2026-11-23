@@ -1,0 +1,34 @@
+## main_llama31_8b
+
+| Type | Class | Numbers | Correct | Control (random other run) |
+|---|---|---|---|---|
+| qt | printed | 40/59 (67.8 %) | 1/40 (2.5 %) | 3/59 (5.1 %) |
+| qt | unit | 2/59 (3.4 %) | 0/2 (0.0 %) | 2/59 (3.4 %) |
+| qt | derived | 4/59 (6.8 %) | 0/4 (0.0 %) | 0/59 (0.0 %) |
+| qt | none | 13/59 (22.0 %) | 0/13 (0.0 %) | 54/59 (91.5 %) |
+| hrv | printed | 48/150 (32.0 %) | 4/48 (8.3 %) | 12/150 (8.0 %) |
+| hrv | unit | 4/150 (2.7 %) | 0/4 (0.0 %) | 10/150 (6.7 %) |
+| hrv | derived | 10/150 (6.7 %) | 2/10 (20.0 %) | 10/150 (6.7 %) |
+| hrv | none | 88/150 (58.7 %) | 6/88 (6.8 %) | 118/150 (78.7 %) |
+
+## main_deepseek-v4-flash
+
+| Type | Class | Numbers | Correct | Control (random other run) |
+|---|---|---|---|---|
+| qt | printed | 213/666 (32.0 %) | 86/213 (40.4 %) | 133/666 (20.0 %) |
+| qt | unit | 205/666 (30.8 %) | 116/205 (56.6 %) | 224/666 (33.6 %) |
+| qt | derived | 101/666 (15.2 %) | 44/101 (43.6 %) | 121/666 (18.2 %) |
+| qt | none | 147/666 (22.1 %) | 73/147 (49.7 %) | 188/666 (28.2 %) |
+| hrv | printed | 929/1155 (80.4 %) | 720/929 (77.5 %) | 159/1155 (13.8 %) |
+| hrv | unit | 60/1155 (5.2 %) | 23/60 (38.3 %) | 204/1155 (17.7 %) |
+| hrv | derived | 38/1155 (3.3 %) | 22/38 (57.9 %) | 154/1155 (13.3 %) |
+| hrv | none | 128/1155 (11.1 %) | 50/128 (39.1 %) | 638/1155 (55.2 %) |
+
+Spectral method in HRV code (fixed 20 % tolerance, LF, HF, LF/HF):
+
+- neurokit2: 46 runs; frequency quantities correct 73/138 (52.9 %)
+- welch: 83 runs; frequency quantities correct 115/249 (46.2 %)
+- lomb-scargle: 6 runs; frequency quantities correct 10/18 (55.6 %)
+- fft/periodogram: 3 runs; frequency quantities correct 2/9 (22.2 %)
+- none found: 32 runs; frequency quantities correct 11/96 (11.5 %)
+

@@ -1,0 +1,24 @@
+
+### main_qwen25coder7b
+
+- E1: 432; isi FINAL: menyerah 364; tanpa FINAL 65; FINAL rusak 3
+- runs E1 dengan angka, asal angka: -
+- runs E1 dengan angka, per jenis: -
+
+### main_qwen25coder3b
+
+- E1: 386; isi FINAL: menyerah 301; tanpa FINAL 76; FINAL rusak 8; tanpa angka 1
+- runs E1 dengan angka, asal angka: -
+- runs E1 dengan angka, per jenis: -
+
+### main_llama31_8b
+
+- E1: 367; isi FINAL: angka lengkap 135; FINAL rusak 103; menyerah 92; tanpa angka 16; angka sebagian 13; tanpa FINAL 8
+- runs E1 dengan angka, asal angka: semua nol 111; tak tercetak 32; sebagian tercetak 5
+- runs E1 dengan angka, per jenis: qt 75; hrv 43; jebakan_ektopik 12; jebakan_kanal 9; jebakan_laju 9
+
+### main_deepseek-v4-flash
+
+- E1: 0; isi FINAL: 
+- runs E1 dengan angka, asal angka: -
+- runs E1 dengan angka, per jenis: -

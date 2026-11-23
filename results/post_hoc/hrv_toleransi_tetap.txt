@@ -1,0 +1,26 @@
+
+Rekaman HRV: 34; toleransi dilebarkan di atas 20 %: lf_ms2 16; hf_ms2 2; lf_hf 14
+
+## Toleransi prareg (dilebarkan)
+
+| Run | HRV semua besaran | HRV frekuensi |
+|---|---|---|
+| flash | 829/1190 (69.7 %) | 248/510 (48.6 %) |
+| NeuroKit2 dwt | 192/238 (80.7 %) | 75/102 (73.5 %) |
+|   flash - dwt: -11.0 poin, p = 0.0150, n = 34 | | |
+| NeuroKit2 peak | 192/238 (80.7 %) | 75/102 (73.5 %) |
+|   flash - peak: -11.0 poin, p = 0.0129, n = 34 | | |
+| NeuroKit2 cwt | 192/238 (80.7 %) | 75/102 (73.5 %) |
+|   flash - cwt: -11.0 poin, p = 0.0142, n = 34 | | |
+
+## Toleransi tetap 20 %
+
+| Run | HRV semua besaran | HRV frekuensi |
+|---|---|---|
+| flash | 792/1190 (66.6 %) | 211/510 (41.4 %) |
+| NeuroKit2 dwt | 180/238 (75.6 %) | 63/102 (61.8 %) |
+|   flash - dwt: -9.1 poin, p = 0.0408, n = 34 | | |
+| NeuroKit2 peak | 180/238 (75.6 %) | 63/102 (61.8 %) |
+|   flash - peak: -9.1 poin, p = 0.0361, n = 34 | | |
+| NeuroKit2 cwt | 180/238 (75.6 %) | 63/102 (61.8 %) |
+|   flash - cwt: -9.1 poin, p = 0.0384, n = 34 | | |

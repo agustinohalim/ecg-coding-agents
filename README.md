@@ -1,7 +1,7 @@
 # ecg-coding-agents
 
 Code, task set, references, and aggregate results for the manuscript *Four Coding Agents Measuring QT and
-HRV Against Expert Annotations* (Halim, in preparation). The study asks whether code written by language-model coding agents returns
+HRV Against Expert Annotations: Better Than a Constant Answer for HRV, Not for QT* (in preparation). The study asks whether code written by language-model coding agents returns
 QT, corrected QT, and frequency-domain heart-rate variability (HRV) values within pre-specified tolerances of
 references derived from expert annotations.
 
@@ -35,7 +35,14 @@ agents' code and its output, not the recordings.
 | `results/` | Outputs of `agenekg_analisis.py`: main runs of the local models (`analisis_utama`), the four models together (`analisis_flash`), DeepSeek-V4-flash against the three baseline methods (`analisis_flash_vs_nk`), baseline (`analisis_dasar_nk`), API-documentation arm per model (`analisis_api*`) |
 | `results/kode_ulang/` | The 145-run sample, the key, the blind LLM recoding with reasons, the codes after the author's adjudication, and both agreement reports |
 | `transcripts/` | One zip per run: `main_*` (four models, 495 task runs each), `baseline_nk_*` (94 answerable tasks per delineation method), `apidoc_*` (API-documentation arm, 99 per local model) |
-| `registration/` | Redacted copy of the preregistration (see below) |
+| `registration/` | Redacted copy of the preregistration, and the confirmatory plan (see below) |
+| `analysis/agenekg_cek_e1.py`, `agenekg_hrv_toleransi_tetap.py` | Post hoc: numbers answered in runs coded E1, and the HRV baseline comparison at a fixed 20 % frequency tolerance |
+| `analysis/agenekg_tambahan_jiki.py` | Post hoc: constant-answer baseline (leave-one-out median), provenance of answered numbers, HRV split by domain |
+| `analysis/agenekg_qt_lantai.py`, `agenekg_asal_ulang.py` | Post hoc: intervals for agent minus constant, per-task QT agreement, constant from records outside the tasks; provenance with unit and derived-value rules and a random-run control, spectral method in the HRV code |
+| `analysis/agenekg_qt_per_run.py` | Post hoc: run-level QT agreement (Bland–Altman bias and limits of agreement, Spearman, Theil–Sen), constant and RR-model baselines |
+| `analysis/agenekg_tugas_konfirmasi.py`, `agenekg_tugas_konfirmasi.json`, `agenekg_rujukan_konfirmasi.json`, `agenekg_konfirmasi_nilai.py` | Confirmatory QT test: the 31 held-out tasks and references, and the analysis fixed before the runs |
+| `results/post_hoc/`, `results/confirmatory/` | Printed outputs of the post hoc scripts and of the confirmatory analysis; `audit_asal.md` is the reading of 30 unmatched QT numbers |
+| `transcripts/confirm_*` | Confirmatory runs: DeepSeek-V4-flash, 31 tasks × 5 (155), and the NeuroKit2 DWT baseline on the same 31 tasks |
 
 Identifiers, printed output, and log fields are in Indonesian (*tugas* = task, *rujukan* = reference, *nilai* =
 score, *ulang* = repeat, *giliran* = turn, *jebakan* = trap, *menyerah* = gave up, *jalan-tapi-salah* = run but
@@ -79,11 +86,35 @@ Model files and their SHA-256 hashes are listed in the manuscript's supplementar
 
 The study was preregistered on 7 November 2026, before any main run (first commit of the registration file in
 the author's private research repository: 7a6bca8, 2026-11-07); every later change is dated in the file and in
-the manuscript (Section 2.9). `registration/Prareg_AgenEKG_disunting.md` is a public copy in Indonesian, as of
+the manuscript (Section 3.9). `registration/Prareg_AgenEKG_disunting.md` is a public copy in Indonesian, as of
 22 November 2026 (last change: commit f3d746a, the DeepSeek-V4-flash runs completed to 495), with one redaction:
 the name of the third-party gateway used for the commercial runs (two lines in the 7 November deviation). The
 unredacted file has md5 `6cd8e42d2c287aeed89cfcf149f8346c`; files it names (`Hasil_AgenEKG_*.md`,
 `jalan_flash.ps1`) are internal notes and a launch script whose numbers and settings appear in the manuscript.
+
+## Version 1.1.0: post hoc checks and the confirmatory QT test
+
+Version 1.1.0 (23 November 2026) adds the scripts, outputs, and transcripts behind the exploratory checks made
+after all results (manuscript Sections 3.7–3.9, 4.6, 4.8) and the confirmatory test (Sections 3.10, 4.7). The
+post hoc scripts are released exactly as they were run (their md5 are recorded in the author's results notes, e.g.
+`agenekg_qt_per_run.py` `3a0772a8…`), with English docstrings; the two scipy warning lines at the top of
+`results/post_hoc/qt_lantai.txt`, which printed a local path, were removed. Each takes the `analysis/` folder and a
+folder of unzipped transcripts, as in its docstring.
+
+`registration/Prareg_AgenEKG_Konfirmasi.md` (Indonesian, unredacted, md5 `a2cab1c333b497d857f67aaddf13a186`) is
+the confirmatory plan. It was committed in the private research repository (commit a694076, 2026-11-22 16:45 UTC+7)
+together with `agenekg_tugas_konfirmasi.py` and `agenekg_konfirmasi_nilai.py`, before the 31 tasks were generated
+and before any run; its three dated deviations (a memory stop, and gateway rejections with HTTP 413, one run
+scored as no answer: `qt_sel31_u1.json` is a hand-written marker that says so) were committed before scoring
+(a42798f, 98d14f6). Its hypotheses H1 and H2 were not supported and H3 was:
+
+```
+python -X utf8 analysis/agenekg_konfirmasi_nilai.py analysis transcripts/confirm_deepseek-v4-flash transcripts/confirm_baseline_nk_dwt
+```
+
+reproduces `results/confirmatory/konfirmasi.txt` after unzipping. The confirmatory tasks reuse the main task text and
+rule, and can be regenerated with `python -I -X utf8 analysis/agenekg_tugas_konfirmasi.py`, which checks that the
+seeded draw of the 45 main tasks is reproduced first.
 
 ## Licence
 
