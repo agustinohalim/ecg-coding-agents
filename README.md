@@ -1,7 +1,7 @@
 # ecg-coding-agents
 
-Code, task set, references, and aggregate results for the manuscript *Four Coding Agents Measuring QT and
-HRV Against Expert Annotations: Better Than a Constant Answer for HRV, Not for QT* (in preparation). The study asks whether code written by language-model coding agents returns
+Code, task set, references, and aggregate results for the manuscript *Four Coding Agents Against Expert
+ECG Annotations: One Beat Signal-Free Answers on HRV, Not Demonstrably on QT* (in preparation). The study asks whether code written by language-model coding agents returns
 QT, corrected QT, and frequency-domain heart-rate variability (HRV) values within pre-specified tolerances of
 references derived from expert annotations.
 
@@ -41,6 +41,7 @@ agents' code and its output, not the recordings.
 | `analysis/agenekg_qt_lantai.py`, `agenekg_asal_ulang.py` | Post hoc: intervals for agent minus constant, per-task QT agreement, constant from records outside the tasks; provenance with unit and derived-value rules and a random-run control, spectral method in the HRV code |
 | `analysis/agenekg_qt_per_run.py` | Post hoc: run-level QT agreement (Bland–Altman bias and limits of agreement, Spearman, Theil–Sen), constant and RR-model baselines |
 | `analysis/agenekg_tugas_konfirmasi.py`, `agenekg_tugas_konfirmasi.json`, `agenekg_rujukan_konfirmasi.json`, `agenekg_konfirmasi_nilai.py` | Confirmatory QT test: the 31 held-out tasks and references, and the analysis fixed before the runs |
+| `analysis/agenekg_cek_panel3.py`, `analysis/agenekg_hrv_model_hr.py` | Post hoc (v1.1.1): within-20 ms paired tests, runs without an answer, limits of agreement for repeated runs, heart-rate model for HRV |
 | `results/post_hoc/`, `results/confirmatory/` | Printed outputs of the post hoc scripts and of the confirmatory analysis; `audit_asal.md` is the reading of 30 unmatched QT numbers |
 | `transcripts/confirm_*` | Confirmatory runs: DeepSeek-V4-flash, 31 tasks × 5 (155), and the NeuroKit2 DWT baseline on the same 31 tasks |
 
@@ -115,6 +116,21 @@ python -X utf8 analysis/agenekg_konfirmasi_nilai.py analysis transcripts/confirm
 reproduces `results/confirmatory/konfirmasi.txt` after unzipping. The confirmatory tasks reuse the main task text and
 rule, and can be regenerated with `python -I -X utf8 analysis/agenekg_tugas_konfirmasi.py`, which checks that the
 seeded draw of the 45 main tasks is reproduced first.
+
+## Version 1.1.1: checks after the confirmatory test
+
+Version 1.1.1 (23 November 2026) adds two exploratory scripts, run after the confirmatory test and released as run
+(md5 `02f2080842c397556efdb07dc0ebefd9` and `31fda71dd691d394154ea51592573fb6`), and their output
+`results/post_hoc/cek_panel3.txt`: the share of runs within 20 ms paired by task against both QT baselines, on the
+main and the confirmatory tasks; the paired absolute error with runs without an answer dropped, scored as ties, or
+scored with the agent's largest error; limits of agreement by the method for repeated observations (Bland and
+Altman 2007); and a heart-rate model for HRV (manuscript Sections 3.7, 3.8, 4.6–4.8). Nothing else changed.
+
+```
+python -X utf8 analysis/agenekg_cek_panel3.py analysis <runs> transcripts/confirm_deepseek-v4-flash
+```
+
+`<runs>` holds `main_<model>/` for the four models, unzipped from `transcripts/`.
 
 ## Licence
 

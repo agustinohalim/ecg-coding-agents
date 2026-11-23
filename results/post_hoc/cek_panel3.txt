@@ -1,0 +1,94 @@
+
+## Main tasks (45, leave-one-out baselines)
+
+### 1. Within 20 ms, paired by task (95 % interval)
+
+- qt_ms, agent minus constant: +4.4 points (-10.7 to +19.6); agent 48.9 %, constant 44.4 %, 21 tasks agent ahead, 19 behind
+- qt_ms, agent minus RR model: +13.3 points (-2.2 to +28.4); agent 48.9 %, RR model 35.6 %, 26 tasks agent ahead, 15 behind
+- qtcb_ms, agent minus constant: +9.8 points (-4.9 to +23.6); agent 45.3 %, constant 35.6 %, 25 tasks agent ahead, 15 behind
+- qtcb_ms, agent minus RR model: +12.0 points (-3.6 to +27.1); agent 45.3 %, RR model 33.3 %, 27 tasks agent ahead, 14 behind
+- qtcf_ms, agent minus constant: +5.3 points (-10.7 to +20.9); agent 47.6 %, constant 42.2 %, 23 tasks agent ahead, 17 behind
+- qtcf_ms, agent minus RR model: +14.2 points (-1.3 to +29.3); agent 47.6 %, RR model 33.3 %, 28 tasks agent ahead, 14 behind
+
+### 2. Runs without an answer, paired absolute error (95.00 % interval)
+
+- qt_ms, minus constant, no-answer runs dropped (3 runs): +2.9 ms (-5.2 to +14.0), 45 tasks
+- qt_ms, minus constant, no-answer runs tie (3 runs): +2.9 ms (-5.2 to +14.0), 45 tasks
+- qt_ms, minus constant, no-answer runs largest error (3 runs): +5.6 ms (-5.2 to +14.4), 45 tasks
+- qt_ms, minus RR model, no-answer runs dropped (3 runs): -0.2 ms (-2.9 to +7.3), 45 tasks
+- qt_ms, minus RR model, no-answer runs tie (3 runs): -0.1 ms (-2.9 to +7.3), 45 tasks
+- qt_ms, minus RR model, no-answer runs largest error (3 runs): +2.9 ms (-2.9 to +7.7), 45 tasks
+- qtcb_ms, minus constant, no-answer runs dropped (3 runs): +5.1 ms (-1.8 to +13.8), 45 tasks
+- qtcb_ms, minus constant, no-answer runs tie (3 runs): +5.1 ms (-1.7 to +11.1), 45 tasks
+- qtcb_ms, minus constant, no-answer runs largest error (3 runs): +6.7 ms (-1.7 to +17.0), 45 tasks
+- qtcb_ms, minus RR model, no-answer runs dropped (3 runs): +2.5 ms (-4.4 to +7.9), 45 tasks
+- qtcb_ms, minus RR model, no-answer runs tie (3 runs): +2.5 ms (-4.4 to +7.9), 45 tasks
+- qtcb_ms, minus RR model, no-answer runs largest error (3 runs): +3.3 ms (-3.3 to +9.5), 45 tasks
+- qtcf_ms, minus constant, no-answer runs dropped (3 runs): +6.4 ms (-1.4 to +14.3), 45 tasks
+- qtcf_ms, minus constant, no-answer runs tie (3 runs): +6.4 ms (-1.4 to +13.4), 45 tasks
+- qtcf_ms, minus constant, no-answer runs largest error (3 runs): +7.9 ms (-1.4 to +17.4), 45 tasks
+- qtcf_ms, minus RR model, no-answer runs dropped (3 runs): +2.9 ms (-3.8 to +7.6), 45 tasks
+- qtcf_ms, minus RR model, no-answer runs tie (3 runs): +2.9 ms (-3.7 to +7.6), 45 tasks
+- qtcf_ms, minus RR model, no-answer runs largest error (3 runs): +4.0 ms (-3.2 to +10.4), 45 tasks
+
+### 3. Limits of agreement for replicated runs (95 % interval)
+
+| Method | Quantity | n | Bias | LoA low | LoA high | Slope of difference on reference |
+|---|---|---|---|---|---|---|
+| DeepSeek-V4-flash | qt_ms | 222 answers, 45 tasks | 13.1 (2.9 to 24.2) | -110.2 (-131.8 to -86.9) | 136.4 (103.9 to 167.6) | -0.1 (-0.5 to 0.1) |
+| DeepSeek-V4-flash | qtcb_ms | 222 answers, 45 tasks | 14.4 (3.7 to 25.6) | -109.9 (-129.4 to -89.7) | 138.7 (106.4 to 168.6) | -0.4 (-0.7 to -0.1) |
+| DeepSeek-V4-flash | qtcf_ms | 222 answers, 45 tasks | 14.3 (3.3 to 25.7) | -109.2 (-128.5 to -88.4) | 137.7 (106.0 to 167.4) | -0.3 (-0.8 to -0.0) |
+
+## Confirmatory tasks (31, baselines fitted on the main tasks)
+
+### 1. Within 20 ms, paired by task (95 % interval)
+
+- qt_ms, agent minus constant: +16.8 points (-1.3 to +34.2); agent 36.1 %, constant 19.4 %, 20 tasks agent ahead, 6 behind
+- qt_ms, agent minus RR model: -2.6 points (-23.9 to +18.7); agent 36.1 %, RR model 38.7 %, 16 tasks agent ahead, 12 behind
+- qtcb_ms, agent minus constant: -1.9 points (-20.0 to +15.5); agent 33.5 %, constant 35.5 %, 15 tasks agent ahead, 10 behind
+- qtcb_ms, agent minus RR model: -5.2 points (-26.5 to +16.1); agent 33.5 %, RR model 38.7 %, 16 tasks agent ahead, 12 behind
+- qtcf_ms, agent minus constant: -7.1 points (-27.7 to +14.2); agent 34.8 %, constant 41.9 %, 14 tasks agent ahead, 12 behind
+- qtcf_ms, agent minus RR model: -3.9 points (-24.5 to +16.8); agent 34.8 %, RR model 38.7 %, 15 tasks agent ahead, 12 behind
+
+### 2. Runs without an answer, paired absolute error (98.33 % interval)
+
+- qt_ms, minus constant, no-answer runs dropped (5 runs): -5.0 ms (-26.1 to +20.7), 31 tasks
+- qt_ms, minus constant, no-answer runs tie (5 runs): -4.7 ms (-26.1 to +19.2), 31 tasks
+- qt_ms, minus constant, no-answer runs largest error (5 runs): -3.5 ms (-26.1 to +21.2), 31 tasks
+- qt_ms, minus RR model, no-answer runs dropped (5 runs): +3.8 ms (-12.2 to +25.7), 31 tasks
+- qt_ms, minus RR model, no-answer runs tie (5 runs): +3.8 ms (-10.7 to +28.1), 31 tasks
+- qt_ms, minus RR model, no-answer runs largest error (5 runs): +11.6 ms (-8.9 to +28.1), 31 tasks
+- qtcb_ms, minus constant, no-answer runs dropped (5 runs): +4.9 ms (-9.5 to +22.9), 31 tasks
+- qtcb_ms, minus constant, no-answer runs tie (5 runs): +4.9 ms (-4.7 to +22.9), 31 tasks
+- qtcb_ms, minus constant, no-answer runs largest error (5 runs): +7.3 ms (-0.8 to +23.6), 31 tasks
+- qtcb_ms, minus RR model, no-answer runs dropped (5 runs): +10.5 ms (-13.7 to +28.6), 31 tasks
+- qtcb_ms, minus RR model, no-answer runs tie (5 runs): +10.5 ms (-11.7 to +28.6), 31 tasks
+- qtcb_ms, minus RR model, no-answer runs largest error (5 runs): +15.9 ms (-10.6 to +38.0), 31 tasks
+- qtcf_ms, minus constant, no-answer runs dropped (5 runs): +11.8 ms (-12.2 to +32.2), 31 tasks
+- qtcf_ms, minus constant, no-answer runs tie (5 runs): +11.8 ms (-12.2 to +30.1), 31 tasks
+- qtcf_ms, minus constant, no-answer runs largest error (5 runs): +12.5 ms (-11.6 to +35.4), 31 tasks
+- qtcf_ms, minus RR model, no-answer runs dropped (5 runs): +10.9 ms (-13.0 to +27.2), 31 tasks
+- qtcf_ms, minus RR model, no-answer runs tie (5 runs): +10.9 ms (-11.4 to +27.2), 31 tasks
+- qtcf_ms, minus RR model, no-answer runs largest error (5 runs): +14.0 ms (-10.6 to +27.5), 31 tasks
+
+### 3. Limits of agreement for replicated runs (95 % interval)
+
+| Method | Quantity | n | Bias | LoA low | LoA high | Slope of difference on reference |
+|---|---|---|---|---|---|---|
+| DeepSeek-V4-flash | qt_ms | 150 answers, 31 tasks | 5.2 (-7.6 to 17.6) | -120.1 (-146.6 to -91.2) | 130.6 (95.6 to 164.2) | -0.2 (-0.4 to 0.1) |
+| DeepSeek-V4-flash | qtcb_ms | 150 answers, 31 tasks | 6.7 (-9.3 to 20.8) | -134.2 (-168.1 to -100.1) | 147.5 (112.7 to 181.3) | -0.3 (-0.6 to 0.1) |
+| DeepSeek-V4-flash | qtcf_ms | 150 answers, 31 tasks | 6.4 (-8.4 to 20.3) | -128.1 (-158.5 to -96.3) | 140.9 (106.5 to 175.2) | -0.3 (-0.6 to 0.1) |
+
+## 4. HRV against a heart-rate model (fixed 20 % tolerance, heart rate excluded; 95 % interval)
+
+- heart-rate model 14.2 %, constant 17.2 % (34 tasks, heart rate excluded)
+- main_qwen25coder7b (0.0 %) minus heart-rate model: -14.2 points (-19.6 to -9.3), p = 0.0001, 34 tasks
+- main_qwen25coder7b (0.0 %) minus constant: -17.2 points (-24.0 to -11.3), p = 0.0001, 34 tasks
+- main_qwen25coder3b (0.2 %) minus heart-rate model: -14.0 points (-19.4 to -9.0), p = 0.0001, 34 tasks
+- main_qwen25coder3b (0.2 %) minus constant: -17.0 points (-23.5 to -10.9), p = 0.0001, 34 tasks
+- main_llama31_8b (2.6 %) minus heart-rate model: -11.6 points (-16.6 to -6.9), p = 0.0001, 34 tasks
+- main_llama31_8b (2.6 %) minus constant: -14.5 points (-21.0 to -8.7), p = 0.0001, 34 tasks
+- main_deepseek-v4-flash (61.6 %) minus heart-rate model: +47.4 points (+41.2 to +53.4), p = 0.0001, 34 tasks
+- main_deepseek-v4-flash (61.6 %) minus constant: +44.4 points (+37.3 to +51.2), p = 0.0001, 34 tasks
+- baseline_nk_dwt (71.6 %) minus heart-rate model: +57.4 points (+44.1 to +69.6), p = 0.0001, 34 tasks
+- baseline_nk_dwt (71.6 %) minus constant: +54.4 points (+42.2 to +66.2), p = 0.0001, 34 tasks
